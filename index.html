@@ -1,85 +1,125 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abel Tesfai | Signal & Power Integrity Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    .hover-card {
-      transition: all 0.25s ease;
-    }
-    .hover-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 4px 15px rgba(59,130,246,0.2);
-    }
+    body { font-family: 'IBM Plex Sans', sans-serif; background-color: #0B0C10; color: #EAEAEA; }
+    .accent { color: #00B4D8; }
+    .card { transition: all 0.3s ease; background-color: rgba(25, 28, 36, 0.85); border: 1px solid #1F2833; }
+    .card:hover { transform: translateY(-4px); border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0, 180, 216, 0.2); }
+    .section-title { border-bottom: 1px solid #1F2833; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
   </style>
 </head>
 
-<body class="bg-gray-950 text-gray-100 font-sans">
-
+<body>
   <!-- Header -->
-  <header class="text-center py-14">
+  <header class="text-center py-12">
     <h1 class="text-4xl font-bold text-white">Abel Tesfai</h1>
-    <p class="text-blue-400 text-lg mt-2">Signal & Power Integrity Engineer @ IBM</p>
-    <p class="text-gray-400 text-sm mt-2 max-w-xl mx-auto">
-      Focused on PDN modeling, transient simulation, and decoupling capacitor optimization for advanced packaging (Nexus, Florence, Sentient).
+    <p class="accent text-lg mt-2">Signal & Power Integrity Engineer @ IBM</p>
+    <p class="text-gray-400 text-sm mt-2 max-w-2xl mx-auto">
+      Focused on PDN modeling, decoupling strategy, and transient optimization for multi-rail systems (Nexus, Florence, Sentient). Experienced in DIMM-level PDN validation, GUI automation, and advanced package design.
     </p>
   </header>
 
-  <!-- Projects Section -->
-  <main class="max-w-4xl mx-auto px-6 space-y-12">
+  <main class="max-w-5xl mx-auto px-6 space-y-16">
 
+    <!-- Professional Experience -->
     <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2 mb-6">Highlighted Projects</h2>
-
+      <h2 class="text-2xl font-semibold section-title">Professional Experience</h2>
+      
       <div class="grid gap-6">
-        
-        <!-- Project 1 -->
-        <div class="hover-card border border-gray-800 p-6 rounded-2xl bg-gray-900/30">
-          <h3 class="text-xl font-bold text-white">PDN Analysis Toolkit</h3>
+        <!-- IBM -->
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-semibold text-white">IBM — Signal & Power Integrity Engineer</h3>
           <p class="text-gray-400 mt-2">
-            Automated AC & transient impedance extraction using Python and Ansys PyAEDT APIs. 
-            Generates Z-mask validation plots and voltage ripple metrics for VRM–Die paths across multiple power rails.
+            • Performed full PDN modeling and validation for Nexus, Florence, and Sentient platforms.<br>
+            • Developed PDN automation scripts in <span class="accent">Python (PyAEDT, Tkinter)</span> for decap trade-off, Z-mask computation, and ripple prediction.<br>
+            • Designed and simulated <span class="accent">DIMM PDN structures</span> on 80-site platforms; optimized loop inductance paths for core and I/O rails.<br>
+            • Delivered transient and AC-domain simulations for DDR rails, VRM response, and PDN compliance.<br>
+            • Created GUI-driven decap selection and report automation tools adopted across multiple projects.<br>
+            • Supported <span class="accent">waveguide element modeling</span> and W-element extraction for high-frequency PDN studies.
           </p>
-          <a href="#" class="inline-block mt-3 text-blue-400 hover:text-blue-300">View GitHub Repo →</a>
         </div>
 
-        <!-- Project 2 -->
-        <div class="hover-card border border-gray-800 p-6 rounded-2xl bg-gray-900/30">
-          <h3 class="text-xl font-bold text-white">MCM Decap Optimization Dashboard</h3>
+        <!-- University -->
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-semibold text-white">Minnesota State University, Mankato — Electrical & Electronics Engineering</h3>
           <p class="text-gray-400 mt-2">
-            Tkinter-based GUI for comparing MTLIC, MLCC, and Si-Cap performance in multi-rail designs. 
-            Includes ESL/ESR modeling, loop inductance visualization, and frequency-domain analysis.
+            • Specialized in electromagnetics, signal integrity, microcontrollers, and circuit design.<br>
+            • Led R&D projects in sensor systems, PCB-based communication interfaces, and power rail measurement correlation.<br>
+            • Applied simulation workflows for power delivery network design and decap optimization in coursework and lab research.
           </p>
-          <a href="#" class="inline-block mt-3 text-blue-400 hover:text-blue-300">View Project →</a>
         </div>
-
-        <!-- Project 3 -->
-        <div class="hover-card border border-gray-800 p-6 rounded-2xl bg-gray-900/30">
-          <h3 class="text-xl font-bold text-white">Power Integrity Report Generator</h3>
-          <p class="text-gray-400 mt-2">
-            A Python-driven tool that automates PDN compliance reports, 
-            integrating Ansys data and design specs to summarize impedance plots, transient responses, and risk closure results.
-          </p>
-          <a href="#" class="inline-block mt-3 text-blue-400 hover:text-blue-300">View GitHub Repo →</a>
-        </div>
-
       </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Technical Projects -->
+    <section>
+      <h2 class="text-2xl font-semibold section-title">Highlighted Technical Projects</h2>
+
+      <div class="grid gap-6">
+        <!-- PDN Toolkit -->
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-bold text-white">PDN Analysis Toolkit</h3>
+          <p class="text-gray-400 mt-2">
+            Automated AC and transient PDN impedance extraction using <span class="accent">Python + Ansys PyAEDT</span>. Generates Z-mask plots, ripple compliance data, and summary dashboards for multi-rail systems.
+          </p>
+          <a href="#" class="inline-block mt-3 accent hover:underline">View GitHub Repo →</a>
+        </div>
+
+        <!-- Decap Optimization -->
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-bold text-white">MCM Decap Optimization Dashboard</h3>
+          <p class="text-gray-400 mt-2">
+            Built a Tkinter GUI for evaluating MLCC, MTLIC, and Si-Cap technologies. Includes ESL/ESR trade-off visualization, frequency sweep comparison, and placement optimization algorithms.
+          </p>
+          <a href="#" class="inline-block mt-3 accent hover:underline">View Project →</a>
+        </div>
+
+        <!-- GUI Automation -->
+        <div class="card p-6 rounded-2xl">
+          <h3 class="text-xl font-bold text-white">GUI Automation for SI/PI Workflow</h3>
+          <p class="text-gray-400 mt-2">
+            Developed interactive GUI interfaces for automating simulation setup, data extraction, and report generation. Used in PDN validation and capacitor qualification flows.
+          </p>
+          <a href="#" class="inline-block mt-3 accent hover:underline">View GitHub Repo →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section>
+      <h2 class="text-2xl font-semibold section-title">Core Skills</h2>
+      <div class="grid md:grid-cols-2 gap-6 text-gray-300">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Power Integrity & Signal Integrity Modeling</li>
+          <li>AC/DC PDN Analysis & Z-mask Validation</li>
+          <li>Transient & Frequency-Domain Simulation</li>
+          <li>Capacitor ESL/ESR Characterization</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Python, PyAEDT, Tkinter, Pandas</li>
+          <li>ANSYS Electronics Desktop (Q2D, HFSS, Nexxim)</li>
+          <li>GUI and Report Automation</li>
+          <li>VRM Modeling and Decoupling Strategy</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section class="border-t border-gray-800 pt-8 text-center">
       <h2 class="text-xl font-semibold mb-3">Connect</h2>
       <div class="flex justify-center space-x-6">
-        <a href="https://www.linkedin.com/in/abel-tesfai-206772141/" target="_blank" class="text-blue-400 hover:text-blue-300">LinkedIn</a>
-        <a href="https://github.com/abeltesfai250" target="_blank" class="text-blue-400 hover:text-blue-300">GitHub</a>
-        <a href="mailto:abeltesfai250@gmail.com" class="text-blue-400 hover:text-blue-300">Email</a>
+        <a href="https://www.linkedin.com/in/abel-tesfai-206772141/" target="_blank" class="accent hover:text-blue-300">LinkedIn</a>
+        <a href="https://github.com/abeltesfai250" target="_blank" class="accent hover:text-blue-300">GitHub</a>
+        <a href="mailto:abeltesfai250@gmail.com" class="accent hover:text-blue-300">Email</a>
       </div>
-      <p class="text-gray-500 text-sm mt-5">© 2025 Abel Tesfai — Built with TailwindCSS & GitHub Pages</p>
+      <p class="text-gray-600 text-sm mt-5">© 2025 Abel Tesfai — Built with IBM Plex Sans, TailwindCSS & GitHub Pages</p>
     </section>
-
   </main>
-
 </body>
 </html>
