@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skills — Abel Tesfai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'IBM Plex Sans',sans-serif;background:#0B0C10;color:#EAEAEA;}
+    .accent{color:#00B4D8;}
+    .card{background:rgba(25,28,36,.85);border:1px solid #1F2833;border-radius:1rem;}
+    .card:hover{border-color:#00B4D8;box-shadow:0 8px 24px rgba(0,180,216,.18);transform:translateY(-3px);transition:.25s;}
+    .nav a.active{color:#00B4D8;}
+  </style>
+</head>
+<body>
+  <nav class="nav sticky top-0 z-10 bg-[#0B0C10]/80 backdrop-blur border-b border-[#1F2833]">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-semibold">Abel Tesfai</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="index.html">Home</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="max-w-6xl mx-auto px-6 py-10">
+    <h1 class="text-3xl font-bold">Core Skills</h1>
+    <p class="text-gray-400 mt-2">Signal Integrity • Power Integrity • Packaging • Automation</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 pb-16">
+    <section class="card p-6">
+      <h2 class="text-xl font-semibold">Technical</h2>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        <li>PDN modeling (AC/DC), Z-mask definition, transient validation</li>
+        <li>ESL/ESR characterization; multi-pin decap (Si-cap, MTLIC) vs MLCC</li>
+        <li>Loop inductance extraction; via/shape optimization</li>
+        <li>Waveguide & W-element modeling</li>
+      </ul>
+    </section>
+
+    <section class="card p-6">
+      <h2 class="text-xl font-semibold">Tools</h2>
+      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
+        <li>ANSYS: HFSS, Q2D, Nexxim, (PyAEDT)</li>
+        <li>Cadence/Allegro, PowerDC/Sigrity (as applicable)</li>
+        <li>Python, Tkinter, Pandas, Matplotlib</li>
+        <li>Touchstone (.sNp) processing, SPICE macromodels</li>
+      </ul>
+    </section>
+
+    <section class="card p-6 md:col-span-2">
+      <h2 class="text-xl font-semibold">Focus Areas</h2>
+      <div class="grid md:grid-cols-3 gap-4 mt-2 text-gray-300">
+        <ul class="list-disc list-inside space-y-1">
+          <li>Near-I/O decoupling</li><li>Impedance shaping</li><li>Transient ripple reduction</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-1">
+          <li>VRM→Die path integrity</li><li>DIMM PDN</li><li>Measurement correlation</li>
+        </ul>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Automation & reporting</li><li>Design flows & risk closure</li><li>Packaging co-design</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#1F2833]">
+    <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-400 flex items-center justify-between">
+      <span>© 2025 Abel Tesfai</span>
+      <a class="accent" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </footer>
+  <script>const p=(location.pathname.split('/').pop()||'skills.html');document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')===p)a.classList.add('active');});</script>
+</body>
+</html>
