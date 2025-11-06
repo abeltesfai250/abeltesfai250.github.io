@@ -3,45 +3,83 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Abel Tesfai | Software Projects</title>
+  <title>Abel Tesfai | Signal & Power Integrity Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    .hover-card {
+      transition: all 0.25s ease;
+    }
+    .hover-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 15px rgba(59,130,246,0.2);
+    }
+  </style>
 </head>
+
 <body class="bg-gray-950 text-gray-100 font-sans">
 
   <!-- Header -->
-  <header class="text-center py-10">
-    <h1 class="text-4xl font-bold">Abel Tesfai</h1>
-    <p class="text-gray-400 text-lg mt-2">Software Engineer | Project Portfolio</p>
+  <header class="text-center py-14">
+    <h1 class="text-4xl font-bold text-white">Abel Tesfai</h1>
+    <p class="text-blue-400 text-lg mt-2">Signal & Power Integrity Engineer @ IBM</p>
+    <p class="text-gray-400 text-sm mt-2 max-w-xl mx-auto">
+      Focused on PDN modeling, transient simulation, and decoupling capacitor optimization for advanced packaging (Nexus, Florence, Sentient).
+    </p>
   </header>
 
   <!-- Projects Section -->
-  <main class="max-w-3xl mx-auto px-6 space-y-12">
-    
+  <main class="max-w-4xl mx-auto px-6 space-y-12">
+
     <section>
-      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2 mb-4">Featured Projects</h2>
-      
-      <div class="space-y-6">
+      <h2 class="text-2xl font-semibold border-b border-gray-700 pb-2 mb-6">Highlighted Projects</h2>
+
+      <div class="grid gap-6">
+        
         <!-- Project 1 -->
-        <div class="border border-gray-800 p-5 rounded-xl hover:bg-gray-900 transition">
-          <h3 class="text-xl font-bold">PicoKernel</h3>
-          <p class="text-gray-400">A lightweight C++ simulator that emulates microkernel process management, IPC, and multithreading.</p>
-          <a href="#" class="inline-block mt-3 text-blue-400 hover:underline">View on GitHub →</a>
+        <div class="hover-card border border-gray-800 p-6 rounded-2xl bg-gray-900/30">
+          <h3 class="text-xl font-bold text-white">PDN Analysis Toolkit</h3>
+          <p class="text-gray-400 mt-2">
+            Automated AC & transient impedance extraction using Python and Ansys PyAEDT APIs. 
+            Generates Z-mask validation plots and voltage ripple metrics for VRM–Die paths across multiple power rails.
+          </p>
+          <a href="#" class="inline-block mt-3 text-blue-400 hover:text-blue-300">View GitHub Repo →</a>
         </div>
 
         <!-- Project 2 -->
-        <div class="border border-gray-800 p-5 rounded-xl hover:bg-gray-900 transition">
-          <h3 class="text-xl font-bold">SysTrack</h3>
-          <p class="text-gray-400">Python-based Linux server monitoring toolkit that tracks temperature, memory usage, and process health in real-time.</p>
-          <a href="#" class="inline-block mt-3 text-blue-400 hover:underline">View Project →</a>
+        <div class="hover-card border border-gray-800 p-6 rounded-2xl bg-gray-900/30">
+          <h3 class="text-xl font-bold text-white">MCM Decap Optimization Dashboard</h3>
+          <p class="text-gray-400 mt-2">
+            Tkinter-based GUI for comparing MTLIC, MLCC, and Si-Cap performance in multi-rail designs. 
+            Includes ESL/ESR modeling, loop inductance visualization, and frequency-domain analysis.
+          </p>
+          <a href="#" class="inline-block mt-3 text-blue-400 hover:text-blue-300">View Project →</a>
         </div>
+
+        <!-- Project 3 -->
+        <div class="hover-card border border-gray-800 p-6 rounded-2xl bg-gray-900/30">
+          <h3 class="text-xl font-bold text-white">Power Integrity Report Generator</h3>
+          <p class="text-gray-400 mt-2">
+            A Python-driven tool that automates PDN compliance reports, 
+            integrating Ansys data and design specs to summarize impedance plots, transient responses, and risk closure results.
+          </p>
+          <a href="#" class="inline-block mt-3 text-blue-400 hover:text-blue-300">View GitHub Repo →</a>
+        </div>
+
       </div>
     </section>
 
-    <!-- Contact -->
-    <section class="border-t border-gray-800 pt-6">
-      <p class="text-center text-gray-500 text-sm">© 2025 Abel Tesfai — Built with ❤️ using TailwindCSS & GitHub Pages</p>
+    <!-- Contact Section -->
+    <section class="border-t border-gray-800 pt-8 text-center">
+      <h2 class="text-xl font-semibold mb-3">Connect</h2>
+      <div class="flex justify-center space-x-6">
+        <a href="https://www.linkedin.com/in/abel-tesfai-206772141/" target="_blank" class="text-blue-400 hover:text-blue-300">LinkedIn</a>
+        <a href="https://github.com/abeltesfai250" target="_blank" class="text-blue-400 hover:text-blue-300">GitHub</a>
+        <a href="mailto:abeltesfai250@gmail.com" class="text-blue-400 hover:text-blue-300">Email</a>
+      </div>
+      <p class="text-gray-500 text-sm mt-5">© 2025 Abel Tesfai — Built with TailwindCSS & GitHub Pages</p>
     </section>
 
   </main>
+
 </body>
 </html>
