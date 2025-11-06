@@ -2,8 +2,6 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="0; url=head.html">
-  <link rel="icon" type="image/png" href="profile.jpg">
   <meta name="description" content="Signal & Power Integrity Engineer at IBM | PDN Modeling, Decap Optimization, Automation">
   <meta property="og:title" content="Abel Tesfai | Signal & Power Integrity Engineer">
   <meta property="og:description" content="From VRM modeling to decap optimization — integrating Signal & Power Integrity for next-generation systems.">
@@ -12,12 +10,13 @@
   <meta name="theme-color" content="#00B4D8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abel Tesfai | Signal & Power Integrity Engineer</title>
+  <link rel="icon" type="image/png" href="profile.jpg">
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'IBM Plex Sans', sans-serif; background-color: #0B0C10; color: #EAEAEA; }
     .accent { color: #00B4D8; }
-    .card { transition: all 0.3s ease; background-color: rgba(25, 28, 36, 0.85); border: 1px solid #1F2833; }
+    .card { transition: all 0.3s ease; background-color: rgba(25, 28, 36, 0.85); border: 1px solid #1F2833; border-radius: 1rem; }
     .card:hover { transform: translateY(-4px); border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0, 180, 216, 0.2); }
     .section-title { border-bottom: 1px solid #1F2833; padding-bottom: 0.5rem; margin-bottom: 1.5rem; }
   </style>
@@ -26,11 +25,26 @@
 <body>
   <!-- Header -->
   <header class="text-center py-12">
+    <!-- Profile Image -->
+    <img src="profile.jpg" alt="Abel Tesfai" 
+         class="mx-auto rounded-full w-40 h-40 object-cover border-4 border-cyan-400 shadow-lg mb-6">
+
+    <!-- Name & Title -->
     <h1 class="text-4xl font-bold text-white">Abel Tesfai</h1>
     <p class="accent text-lg mt-2">Signal & Power Integrity Engineer @ IBM</p>
-    <p class="text-gray-400 text-sm mt-2 max-w-2xl mx-auto">
-      Focused on PDN modeling, decoupling strategy, and transient optimization for multi-rail systems (Nexus, Florence, Sentient). Experienced in DIMM-level PDN validation, GUI automation, and advanced package design.
+
+    <!-- Personal Quote -->
+    <p class="text-gray-400 text-sm mt-4 max-w-2xl mx-auto">
+      “From VRM modeling to decap optimization — integrating Signal & Power Integrity for next-generation systems.”
     </p>
+
+    <!-- Resume Button -->
+    <div class="mt-6">
+      <a href="resume.pdf" download 
+         class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-5 rounded-full shadow-md transition duration-200">
+         ⬇ Download Resume
+      </a>
+    </div>
   </header>
 
   <main class="max-w-5xl mx-auto px-6 space-y-16">
@@ -41,7 +55,7 @@
       
       <div class="grid gap-6">
         <!-- IBM -->
-        <div class="card p-6 rounded-2xl">
+        <div class="card p-6">
           <h3 class="text-xl font-semibold text-white">IBM — Signal & Power Integrity Engineer</h3>
           <p class="text-gray-400 mt-2">
             • Performed full PDN modeling and validation for Nexus, Florence, and Sentient platforms.<br>
@@ -54,7 +68,7 @@
         </div>
 
         <!-- University -->
-        <div class="card p-6 rounded-2xl">
+        <div class="card p-6">
           <h3 class="text-xl font-semibold text-white">Minnesota State University, Mankato — Electrical & Electronics Engineering</h3>
           <p class="text-gray-400 mt-2">
             • Specialized in electromagnetics, signal integrity, microcontrollers, and circuit design.<br>
@@ -70,29 +84,29 @@
       <h2 class="text-2xl font-semibold section-title">Highlighted Technical Projects</h2>
 
       <div class="grid gap-6">
-        <!-- PDN Toolkit -->
-        <div class="card p-6 rounded-2xl">
+        <div class="card p-6">
           <h3 class="text-xl font-bold text-white">PDN Analysis Toolkit</h3>
           <p class="text-gray-400 mt-2">
-            Automated AC and transient PDN impedance extraction using <span class="accent">Python + Ansys PyAEDT</span>. Generates Z-mask plots, ripple compliance data, and summary dashboards for multi-rail systems.
+            Automated AC and transient PDN impedance extraction using <span class="accent">Python + Ansys PyAEDT</span>. 
+            Generates Z-mask plots, ripple compliance data, and summary dashboards for multi-rail systems.
           </p>
           <a href="#" class="inline-block mt-3 accent hover:underline">View GitHub Repo →</a>
         </div>
 
-        <!-- Decap Optimization -->
-        <div class="card p-6 rounded-2xl">
+        <div class="card p-6">
           <h3 class="text-xl font-bold text-white">MCM Decap Optimization Dashboard</h3>
           <p class="text-gray-400 mt-2">
-            Built a Tkinter GUI for evaluating MLCC, MTLIC, and Si-Cap technologies. Includes ESL/ESR trade-off visualization, frequency sweep comparison, and placement optimization algorithms.
+            Built a Tkinter GUI for evaluating MLCC, MTLIC, and Si-Cap technologies. Includes ESL/ESR trade-off visualization, 
+            frequency sweep comparison, and placement optimization algorithms.
           </p>
           <a href="#" class="inline-block mt-3 accent hover:underline">View Project →</a>
         </div>
 
-        <!-- GUI Automation -->
-        <div class="card p-6 rounded-2xl">
+        <div class="card p-6">
           <h3 class="text-xl font-bold text-white">GUI Automation for SI/PI Workflow</h3>
           <p class="text-gray-400 mt-2">
-            Developed interactive GUI interfaces for automating simulation setup, data extraction, and report generation. Used in PDN validation and capacitor qualification flows.
+            Developed interactive GUI interfaces for automating simulation setup, data extraction, and report generation. 
+            Used in PDN validation and capacitor qualification flows.
           </p>
           <a href="#" class="inline-block mt-3 accent hover:underline">View GitHub Repo →</a>
         </div>
@@ -126,7 +140,9 @@
         <a href="https://github.com/abeltesfai250" target="_blank" class="accent hover:text-blue-300">GitHub</a>
         <a href="mailto:abeltesfai250@gmail.com" class="accent hover:text-blue-300">Email</a>
       </div>
-      <p class="text-gray-600 text-sm mt-5">© 2025 Abel Tesfai — Built with IBM Plex Sans, TailwindCSS & GitHub Pages</p>
+      <p class="text-gray-600 text-sm mt-5">
+        © 2025 Abel Tesfai — Built with IBM Plex Sans, TailwindCSS & GitHub Pages
+      </p>
     </section>
   </main>
 </body>
