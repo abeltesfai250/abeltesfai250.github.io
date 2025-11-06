@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Abel Tesfai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body{font-family:'IBM Plex Sans',sans-serif;background:#0B0C10;color:#EAEAEA;}
+    .accent{color:#00B4D8;} .card{background:rgba(25,28,36,.85);border:1px solid #1F2833;border-radius:1rem;}
+    .card:hover{border-color:#00B4D8;box-shadow:0 8px 24px rgba(0,180,216,.18);transform:translateY(-3px);transition:.25s;}
+    .nav a.active{color:#00B4D8;}
+    input,textarea{background:#0F131A;border:1px solid #1F2833;border-radius:.75rem;padding:.8rem;color:#EAEAEA;width:100%;}
+    input:focus,textarea:focus{outline:none;border-color:#00B4D8;box-shadow:0 0 0 3px rgba(0,180,216,.15);}
+    .btn{padding:.8rem 1rem;border:1px solid #1F2833;border-radius:.8rem;transition:.2s;}
+    .btn:hover{border-color:#00B4D8;box-shadow:0 6px 18px rgba(0,180,216,.15);transform:translateY(-2px);}
+  </style>
+</head>
+<body>
+  <nav class="nav sticky top-0 z-10 bg-[#0B0C10]/80 backdrop-blur border-b border-[#1F2833]">
+    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
+      <a href="index.html" class="font-semibold">Abel Tesfai</a>
+      <div class="hidden md:flex gap-6 text-sm">
+        <a href="index.html">Home</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="skills.html">Skills</a><a href="contact.html">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <header class="max-w-6xl mx-auto px-6 py-10">
+    <h1 class="text-3xl font-bold">Contact</h1>
+    <p class="text-gray-400 mt-2">Reach out for SI/PI collaboration or opportunities.</p>
+  </header>
+
+  <main class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 pb-16">
+    <section class="card p-6">
+      <h2 class="text-xl font-semibold">Direct</h2>
+      <ul class="mt-3 text-gray-300 space-y-2">
+        <li>📧 <a class="accent" href="mailto:abeltesfai250@gmail.com">abeltesfai250@gmail.com</a></li>
+        <li>🔗 <a class="accent" target="_blank" href="https://www.linkedin.com/in/abel-tesfai-206772141/">LinkedIn</a></li>
+        <li>💻 <a class="accent" target="_blank" href="https://github.com/abeltesfai250">GitHub</a></li>
+        <!-- Optional: <li>📞 +1 (xxx) xxx-xxxx</li> -->
+      </ul>
+      <a href="resume.pdf" class="btn inline-block mt-5" download>⬇ Download Resume (PDF)</a>
+    </section>
+
+    <section class="card p-6">
+      <h2 class="text-xl font-semibold">Quick Message</h2>
+      <!-- mailto-based form (no backend needed) -->
+      <form action="mailto:abeltesfai250@gmail.com" method="post" enctype="text/plain">
+        <label class="block text-sm text-gray-400 mt-2">Name</label>
+        <input name="name" required />
+        <label class="block text-sm text-gray-400 mt-4">Email</label>
+        <input type="email" name="email" required />
+        <label class="block text-sm text-gray-400 mt-4">Message</label>
+        <textarea name="message" rows="5" required></textarea>
+        <button class="btn mt-5" type="submit">Send</button>
+      </form>
+      <p class="text-xs text-gray-500 mt-3">Note: This uses your email client to send the message.</p>
+    </section>
+  </main>
+
+  <footer class="border-t border-[#1F2833]">
+    <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-400 flex items-center justify-between">
+      <span>© 2025 Abel Tesfai</span>
+      <a class="accent" href="resume.pdf" download>Download Resume</a>
+    </div>
+  </footer>
+
+  <script>const p=(location.pathname.split('/').pop()||'contact.html');document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')===p)a.classList.add('active');});</script>
+</body>
+</html>
