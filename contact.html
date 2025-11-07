@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Contact — Abel Tesfai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => AOS.init({ duration: 800, once: true }));
+  </script>
   <style>
-    body{font-family:'IBM Plex Sans',sans-serif;background:#0B0C10;color:#EAEAEA;}
-    .accent{color:#00B4D8;} .card{background:rgba(25,28,36,.85);border:1px solid #1F2833;border-radius:1rem;}
-    .card:hover{border-color:#00B4D8;box-shadow:0 8px 24px rgba(0,180,216,.18);transform:translateY(-3px);transition:.25s;}
-    .nav a.active{color:#00B4D8;}
-    input,textarea{background:#0F131A;border:1px solid #1F2833;border-radius:.75rem;padding:.8rem;color:#EAEAEA;width:100%;}
-    input:focus,textarea:focus{outline:none;border-color:#00B4D8;box-shadow:0 0 0 3px rgba(0,180,216,.15);}
-    .btn{padding:.8rem 1rem;border:1px solid #1F2833;border-radius:.8rem;transition:.2s;}
-    .btn:hover{border-color:#00B4D8;box-shadow:0 6px 18px rgba(0,180,216,.15);transform:translateY(-2px);}
+    body { font-family: 'IBM Plex Sans', sans-serif; background: #0B0C10; color: #EAEAEA; scroll-behavior: smooth; }
+    .accent { color: #00B4D8; }
+    .card { background: rgba(25,28,36,.85); border: 1px solid #1F2833; border-radius: 1rem; transition: all .3s ease; }
+    .card:hover { border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0,180,216,.25); transform: translateY(-3px); }
+    .nav a.active { color: #00B4D8; border-bottom: 2px solid #00B4D8; padding-bottom: 2px; }
   </style>
 </head>
+
 <body>
-  <!-- NAVBAR (use on every page) -->
+  <!-- NAVBAR -->
   <nav class="nav fixed top-0 left-0 right-0 z-50 bg-[#0B0C10]/85 backdrop-blur border-b border-[#1F2833]">
     <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="font-semibold text-lg text-cyan-400">Abel Tesfai</a>
       <div class="hidden md:flex gap-6 text-sm text-gray-300">
         <a href="index.html">Home</a>
-        <a href="index.html#experience">Experience</a>
+        <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
@@ -31,46 +35,78 @@
     </div>
   </nav>
 
-  <header class="max-w-6xl mx-auto px-6 py-10">
-    <h1 class="text-3xl font-bold">Contact</h1>
-    <p class="text-gray-400 mt-2">Reach out for SI/PI collaboration or opportunities.</p>
+  <!-- CONTACT HEADER -->
+  <header class="max-w-4xl mx-auto px-6 pt-28 pb-10 text-center" data-aos="fade-up">
+    <h1 class="text-3xl font-bold text-white">Get in Touch</h1>
+    <p class="text-gray-400 mt-3">
+      Whether you’d like to discuss power integrity simulation workflows, automation projects, or future collaborations—let’s connect.
+    </p>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 pb-16">
-    <section class="card p-6">
-      <h2 class="text-xl font-semibold">Direct</h2>
-      <ul class="mt-3 text-gray-300 space-y-2">
-        <li>📧 <a class="accent" href="mailto:abeltesfai250@gmail.com">abeltesfai250@gmail.com</a></li>
-        <li>🔗 <a class="accent" target="_blank" href="https://www.linkedin.com/in/abel-tesfai-206772141/">LinkedIn</a></li>
-        <li>💻 <a class="accent" target="_blank" href="https://github.com/abeltesfai250">GitHub</a></li>
-        <!-- Optional: <li>📞 +1 (xxx) xxx-xxxx</li> -->
-      </ul>
-      <a href="resume.pdf" class="btn inline-block mt-5" download>⬇ Download Resume (PDF)</a>
-    </section>
+  <!-- CONTACT CONTENT -->
+  <main class="max-w-4xl mx-auto px-6 pb-20 space-y-10">
+    <!-- Contact Cards -->
+    <div class="grid md:grid-cols-3 gap-6" data-aos="fade-up">
+      <a href="mailto:abelntesfai@gmail.com" class="card p-6 text-center hover:shadow-lg">
+        <h2 class="text-xl font-semibold mb-2 accent">Email</h2>
+        <p class="text-gray-300 text-sm">abelntesfai@gmail.com</p>
+      </a>
 
-    <section class="card p-6">
-      <h2 class="text-xl font-semibold">Quick Message</h2>
-      <!-- mailto-based form (no backend needed) -->
-      <form action="mailto:abeltesfai250@gmail.com" method="post" enctype="text/plain">
-        <label class="block text-sm text-gray-400 mt-2">Name</label>
-        <input name="name" required />
-        <label class="block text-sm text-gray-400 mt-4">Email</label>
-        <input type="email" name="email" required />
-        <label class="block text-sm text-gray-400 mt-4">Message</label>
-        <textarea name="message" rows="5" required></textarea>
-        <button class="btn mt-5" type="submit">Send</button>
+      <a href="https://www.linkedin.com/in/abel-tesfai-206772141/" target="_blank" class="card p-6 text-center hover:shadow-lg">
+        <h2 class="text-xl font-semibold mb-2 accent">LinkedIn</h2>
+        <p class="text-gray-300 text-sm">linkedin.com/in/abel-tesfai-206772141/</p>
+      </a>
+
+      <a href="https://github.com/abeltesfai250" target="_blank" class="card p-6 text-center hover:shadow-lg">
+        <h2 class="text-xl font-semibold mb-2 accent">GitHub</h2>
+        <p class="text-gray-300 text-sm">github.com/abeltesfai250</p>
+      </a>
+    </div>
+
+    <!-- Divider -->
+    <div class="border-t border-gray-800 my-8"></div>
+
+    <!-- Contact Form (optional, mailto style) -->
+    <div class="card p-8" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4 text-center">Send a Message</h2>
+      <form action="mailto:abelntesfai@gmail.com" method="POST" enctype="text/plain" class="space-y-4">
+        <div>
+          <label class="block text-gray-400 text-sm mb-1">Your Name</label>
+          <input type="text" name="Name" required class="w-full p-2 rounded-md bg-[#1F2833] border border-gray-700 focus:border-cyan-400 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-400 text-sm mb-1">Your Email</label>
+          <input type="email" name="Email" required class="w-full p-2 rounded-md bg-[#1F2833] border border-gray-700 focus:border-cyan-400 outline-none">
+        </div>
+
+        <div>
+          <label class="block text-gray-400 text-sm mb-1">Message</label>
+          <textarea name="Message" rows="4" required class="w-full p-2 rounded-md bg-[#1F2833] border border-gray-700 focus:border-cyan-400 outline-none"></textarea>
+        </div>
+
+        <button type="submit" class="bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-6 rounded-full shadow-md transition">
+          Send Message
+        </button>
       </form>
-      <p class="text-xs text-gray-500 mt-3">Note: This uses your email client to send the message.</p>
-    </section>
+      <p class="text-gray-500 text-xs mt-3 text-center">*This opens your default mail app with your message pre-filled.</p>
+    </div>
   </main>
 
+  <!-- FOOTER -->
   <footer class="border-t border-[#1F2833]">
-    <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-400 flex items-center justify-between">
-      <span>© 2025 Abel Tesfai</span>
-      <a class="accent" href="resume.pdf" download>Download Resume</a>
+    <div class="max-w-6xl mx-auto px-6 py-6 text-center text-gray-400">
+      <p>© 2025 Abel Tesfai — Built with TailwindCSS, AOS & GitHub Pages</p>
     </div>
   </footer>
 
-  <script>const p=(location.pathname.split('/').pop()||'contact.html');document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')===p)a.classList.add('active');});</script>
+  <!-- ACTIVE NAV SCRIPT -->
+  <script>
+    const path = location.pathname.split('/').pop() || 'contact.html';
+    document.querySelectorAll('.nav a').forEach(a => {
+      const normalized = a.getAttribute('href').split('#')[0];
+      if (normalized === path) a.classList.add('active');
+    });
+  </script>
 </body>
 </html>
