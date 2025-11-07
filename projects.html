@@ -1,148 +1,296 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abel Tesfai | Signal & Power Integrity Engineer</title>
-  <meta name="description" content="Signal & Power Integrity Engineer at IBM | PDN Modeling, Decap Optimization, Automation" />
-  <link rel="icon" type="image/png" href="IMG_6740.jpg" />
+  <title>Tebibu – Projects</title>
+  <meta name="description" content="Signal & Power Integrity projects: PDN modeling, decoupling optimization, SI extraction tools, and wafer fabrication." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => AOS.init({ duration: 800, once: true }));
-  </script>
   <style>
-    body { font-family: 'IBM Plex Sans', sans-serif; background: #0B0C10; color: #EAEAEA; scroll-behavior: smooth; }
-    .accent { color: #00B4D8; }
-    .card { background: rgba(25,28,36,.85); border: 1px solid #1F2833; border-radius: 1rem; transition: all .3s ease; }
-    .card:hover { border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0,180,216,.25); transform: translateY(-3px); }
-    .nav a.active { color: #00B4D8; border-bottom: 2px solid #00B4D8; padding-bottom: 2px; }
+    :root { --ink:#0f172a; --muted:#64748b; --accent:#06b6d4; }
+    html{scroll-behavior:smooth}
+    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
+    .glass{backdrop-filter:blur(8px);}
+    .tag{border:1px solid rgba(2,132,199,.25)}
+    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.12)}
+    .card-clip{clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),calc(100% - 18px) 100%,0 100%)}
+    /* Simple fade */
+    .fade-in{opacity:0; transform:translateY(8px); animation:fade .5s forwards}
+    @keyframes fade{to{opacity:1; transform:none}}
   </style>
 </head>
-<body>
-
-  <!-- NAVBAR (use on every page) -->
-  <nav class="nav fixed top-0 left-0 right-0 z-50 bg-[#0B0C10]/85 backdrop-blur border-b border-[#1F2833]">
-    <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
-      <a href="index.html" class="font-semibold text-lg text-cyan-400">Abel Tesfai</a>
-      <div class="hidden md:flex gap-6 text-sm text-gray-300">
-        <a href="index.html">Home</a>
-        <a href="index.html#experience">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="skills.html">Skills</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </div>
-  </nav>
-
+<body class="bg-slate-950 text-slate-100">
   <!-- Header -->
-  <header id="top" class="text-center pt-28 pb-16 px-6">
-    <img src="IMG_6740.jpg" alt="Abel Tesfai" class="mx-auto rounded-full w-36 h-36 md:w-44 md:h-44 object-cover border-4 border-cyan-400 shadow-lg mb-6">
-    <h1 class="text-4xl font-bold text-white">Abel Tesfai</h1>
-    <p class="accent text-lg mt-2">Signal & Power Integrity Engineer @ IBM</p>
-    <p class="text-gray-400 text-sm mt-4 max-w-2xl mx-auto italic">
-      “From VRM modeling to decap optimization — integrating Signal & Power Integrity for next-generation systems.”
-    </p>
-    <a href="resume.pdf" download class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-5 mt-6 rounded-full shadow-md transition duration-200">
-      ⬇ Download Resume
-    </a>
+  <header class="sticky top-0 z-30 bg-slate-950/70 glass border-b border-white/5">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="text-xl font-semibold tracking-tight">Tebibu <span class="text-cyan-400">/ Projects</span></a>
+      <nav class="hidden sm:flex items-center gap-6 text-slate-300">
+        <a href="index.html" class="hover:text-white">Home</a>
+        <a href="skills.html" class="hover:text-white">Skills</a>
+        <a href="#top" class="text-cyan-400">Projects</a>
+        <a href="contact.html" class="hover:text-white">Contact</a>
+      </nav>
+    </div>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 space-y-20">
-
-    <!-- Experience -->
-    <section id="experience" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b border-gray-800 pb-2 mb-6">Professional Experience</h2>
-      <div class="grid gap-6">
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold">IBM — Signal & Power Integrity Engineer</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            • Modeled and validated full PDNs for Nexus, Florence, and Sentient platforms.<br>
-            • Automated <span class="accent">Z-mask extraction</span> and decap optimization using Python + PyAEDT.<br>
-            • Designed DIMM PDN structures, reducing loop inductance across 80-site boards.<br>
-            • Delivered transient + AC-domain simulations for DDR/VRM compliance.<br>
-            • Created GUI-driven decap tools used across multiple IBM projects.
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
+      <div class="grid lg:grid-cols-2 gap-10 items-center">
+        <div class="fade-in [animation-delay:0ms]">
+          <h1 class="text-3xl sm:text-4xl font-bold leading-tight">
+            Selected Work in <span class="text-cyan-400">Signal & Power Integrity</span>
+          </h1>
+          <p class="mt-4 text-slate-300 max-w-prose">
+            A curated set of hands‑on projects spanning PDN modeling, decoupling optimization, high‑speed channel extraction,
+            automation utilities, and wafer‑level fabrication. All examples are presented at a high level with non‑proprietary visuals.
           </p>
-        </div>
-
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold">Minnesota State University, Mankato — Electrical & Electronics Engineering</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            • Specialized in electromagnetics, signal integrity, and PCB-based measurement systems.<br>
-            • Led R&D projects on sensor networks and rail measurement correlation.<br>
-            • Applied PDN simulation methods and capacitor optimization in lab projects.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
-    <section id="projects" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b border-gray-800 pb-2 mb-6">Highlighted Technical Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card p-6">
-          <img src="images/pdn_toolkit.png" alt="PDN Analysis Toolkit" class="rounded-md mb-4">
-          <h3 class="text-xl font-bold text-white">PDN Analysis Toolkit</h3>
-          <p class="text-gray-400 mt-2">Automated impedance and ripple analysis for PDN systems using <span class="accent">Python + PyAEDT</span>.</p>
-          <div class="flex flex-wrap gap-2 mt-3 text-xs">
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Python</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Ansys</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Tkinter</span>
+          <div class="mt-6 flex flex-wrap gap-3">
+            <span class="px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300 tag">PDN & Z‑mask</span>
+            <span class="px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300 tag">DDRx SI</span>
+            <span class="px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300 tag">EDA Automation</span>
+            <span class="px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-300 tag">Cleanroom</span>
           </div>
-          <a href="projects.html#pdn" class="accent hover:underline inline-block mt-4">View Details →</a>
         </div>
-
-        <div class="card p-6">
-          <img src="images/decap_dash.png" alt="Decap Dashboard" class="rounded-md mb-4">
-          <h3 class="text-xl font-bold text-white">MCM Decap Optimization Dashboard</h3>
-          <p class="text-gray-400 mt-2">GUI tool comparing MLCC, MTLIC, and Si-Cap technologies with real-time ESL/ESR plots.</p>
-          <div class="flex flex-wrap gap-2 mt-3 text-xs">
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Tkinter</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Python</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Matplotlib</span>
+        <div class="fade-in [animation-delay:120ms]">
+          <div class="relative rounded-2xl shadow-soft border border-white/10 card-clip">
+            <img src="assets/projects/pdn_gui.png" alt="Full PDN Impedance Visualizer screenshot" class="w-full h-[320px] object-cover rounded-2xl"/>
+            <div class="absolute bottom-0 right-0 m-2 px-2 py-1 text-[12px] bg-black/60 rounded">Tooling • Python/Tkinter • Matplotlib</div>
           </div>
-          <a href="projects.html#decap" class="accent hover:underline inline-block mt-4">View Details →</a>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Skills -->
-    <section id="skills" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b border-gray-800 pb-2 mb-6">Core Skills</h2>
-      <div class="grid md:grid-cols-2 gap-6 text-gray-300">
-        <ul class="list-disc list-inside space-y-1">
-          <li>Power & Signal Integrity Modeling</li>
-          <li>AC/DC PDN Simulation & Validation</li>
-          <li>Transient + Frequency Domain Analysis</li>
-          <li>Capacitor ESL/ESR Characterization</li>
-        </ul>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Python, PyAEDT, Tkinter, Pandas</li>
-          <li>ANSYS HFSS, Q2D, Nexxim</li>
-          <li>Automation, GUI Tools, Data Visualization</li>
-          <li>VRM Modeling & Decoupling Strategy</li>
-        </ul>
-      </div>
-    </section>
+  <!-- Filters -->
+  <section class="border-y border-white/5 bg-slate-900/40">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-6 flex flex-wrap items-center gap-3">
+      <span class="text-slate-300">Filter:</span>
+      <button data-filter="all" class="filter-btn px-3 py-1 rounded-full bg-cyan-500/20 text-cyan-200 hover:bg-cyan-500/30">All</button>
+      <button data-filter="pi" class="filter-btn px-3 py-1 rounded-full bg-white/5 hover:bg-white/10">Power Integrity</button>
+      <button data-filter="si" class="filter-btn px-3 py-1 rounded-full bg-white/5 hover:bg-white/10">Signal Integrity</button>
+      <button data-filter="tools" class="filter-btn px-3 py-1 rounded-full bg-white/5 hover:bg-white/10">Automation & Tools</button>
+      <button data-filter="fab" class="filter-btn px-3 py-1 rounded-full bg-white/5 hover:bg-white/10">Fabrication</button>
+      <button data-filter="systems" class="filter-btn px-3 py-1 rounded-full bg-white/5 hover:bg-white/10">Systems</button>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section id="contact" data-aos="fade-up" class="border-t border-gray-800 pt-8 text-center">
-      <h2 class="text-xl font-semibold mb-4">Connect</h2>
-      <div class="flex justify-center space-x-6">
-        <a href="https://www.linkedin.com/in/abel-tesfai-206772141/" target="_blank" class="accent hover:text-blue-300">LinkedIn</a>
-        <a href="https://github.com/abeltesfai250" target="_blank" class="accent hover:text-blue-300">GitHub</a>
-        <a href="mailto:abelntesfai@gmail.com" class="accent hover:text-blue-300">Email</a>
+  <!-- Project Grid -->
+  <main class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12 space-y-12">
+    <!-- PDN Visualizer -->
+    <article class="project fade-in" data-tags="pi tools">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <img src="assets/projects/pdn_gui.png" alt="PDN Visualizer UI with impedance plots" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Full PDN Impedance Visualizer</h2>
+          <p class="mt-3 text-slate-300">A desktop application that models VRM→board→package→die impedance, visualizes component branch contributions, and overlays Z‑masks for target compliance. Supports cap type libraries (MLCC/MTLIC/on‑die), BGA aggregation, and export to CSV/S‑parameters/SPICE.</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-300 list-disc list-inside">
+            <li>Parametric sweeps & Z‑target computation</li>
+            <li>PKG, board, and on‑die decap modeling with attach inductance</li>
+            <li>PDF reporting and multi‑format exports</li>
+            <li>Cursor/zoom tools for rapid design review</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="px-2 py-1 rounded bg-white/5">Python</span>
+            <span class="px-2 py-1 rounded bg-white/5">Tkinter</span>
+            <span class="px-2 py-1 rounded bg-white/5">NumPy</span>
+            <span class="px-2 py-1 rounded bg-white/5">Matplotlib</span>
+          </div>
+        </div>
       </div>
-      <p class="text-gray-600 text-sm mt-6">© 2025 Abel Tesfai — Built with TailwindCSS, AOS, and GitHub Pages</p>
-    </section>
+    </article>
+
+    <!-- W-Element Extractor -->
+    <article class="project fade-in" data-tags="si tools">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <img src="assets/projects/w_element_gui.png" alt="W‑element Q2D extraction GUI" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">W‑Element (Q2D) Extraction GUI</h2>
+          <p class="mt-3 text-slate-300">An automation layer for 2D field extraction that builds stackups, draws geometry, runs sweeps, and exports distributed transmission line models. Designed for rapid iteration during DDRx channel design and SI correlation.</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-300 list-disc list-inside">
+            <li>Single‑ended & differential modes with etch compensation</li>
+            <li>Material/loss parameterization with frequency corners</li>
+            <li>Batch export of <code>.sp</code> models for SI tools</li>
+            <li>Non‑graphical runs to speed headless extraction</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="px-2 py-1 rounded bg-white/5">Python</span>
+            <span class="px-2 py-1 rounded bg-white/5">PyAEDT API</span>
+            <span class="px-2 py-1 rounded bg-white/5">EDA Scripting</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Layout Automation (SILO, anti-pads, stitching) -->
+    <article class="project fade-in" data-tags="pi si tools">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4">
+          <img src="assets/projects/silo.png" alt="Anti‑pad and via stitching illustration" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+          <img src="assets/projects/pdn_stack.png" alt="Package on board PDN stack‑up sketch" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Layout Automation: SILO, Anti‑Pad Generator & Ground Stitching</h2>
+          <p class="mt-3 text-slate-300">Utility scripts that generate stitched‑via fences, anti‑pad clearances, and cavity patterns consistent with PDN targets and return‑path integrity. Built to reduce manual layout work and enforce PI/SI rules at scale.</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-300 list-disc list-inside">
+            <li>Rule‑driven pattern synthesis</li>
+            <li>Automated export for downstream layout tools</li>
+            <li>Hooks for impedance and resonance checks</li>
+            <li>Batch operations for multi‑net application</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="px-2 py-1 rounded bg-white/5">Python</span>
+            <span class="px-2 py-1 rounded bg-white/5">PyAEDT</span>
+            <span class="px-2 py-1 rounded bg-white/5">Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- End-to-End DDRx SI Flow (high-level, non-confidential) -->
+    <article class="project fade-in" data-tags="si systems">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <img src="assets/projects/dimm_flow.png" alt="High‑level DIMM SI diagram" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">End‑to‑End DDRx DIMM SI Flow (High‑Level)</h2>
+          <p class="mt-3 text-slate-300">A reusable workflow for DIMM channel design: topology planning, loss/dispersion modeling, W‑element extraction, overshoot/undershoot analysis, and eye/BER evaluation. Includes guardrails for simultaneous switching and power‑aware SI.</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-300 list-disc list-inside">
+            <li>Constraint‑driven routing & via transitions</li>
+            <li>Cross‑checks against PDN impedance and SSN</li>
+            <li>Model handoff and documentation templates</li>
+            <li>Correlation checkpoints (time/frequency domain)</li>
+          </ul>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="px-2 py-1 rounded bg-white/5">SI Methodology</span>
+            <span class="px-2 py-1 rounded bg-white/5">Models & Correlation</span>
+          </div>
+        </div>
+      </div>
+    </article>
+
+    <!-- Package PI & SI Design (confidential-safe) -->
+    <article class="project fade-in" data-tags="pi si systems">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <img src="assets/projects/pkg_slice.png" alt="Generic package‑on‑board conceptual diagram" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Package PI & SI Design (High‑Level Summary)</h2>
+          <p class="mt-3 text-slate-300">Worked on high‑performance BGA packages focusing on decoupling strategy, plane resonance mitigation, and low‑inductance attach. Activities included target‑impedance budgeting, cap type selection, layer‑by‑layer placement tradeoffs, and risk‑reduction experiments. Details are generalized to respect confidentiality.</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-300 list-disc list-inside">
+            <li>Cap portfolio planning (on‑die / in‑package / on‑board)</li>
+            <li>Attach‑path optimization and current return control</li>
+            <li>Anti‑resonance management and damping approaches</li>
+            <li>Documentation for design reviews & sign‑off</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Wafer Fabrication Project -->
+    <article class="project fade-in" data-tags="fab systems">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div class="space-y-4">
+          <img src="assets/projects/wafer_macro.png" alt="Silicon wafer with colorful photoresist pattern" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+          <img src="assets/projects/die_photo.png" alt="Packaged die close‑up" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">Wafer Microfabrication Lab</h2>
+          <p class="mt-3 text-slate-300">Hands‑on cleanroom process run: mask alignment, photolithography, thermal steps, BOE etch, and inspection. Final packaged sample was probed and tested to validate feature fidelity and process windows.</p>
+          <ul class="mt-4 grid sm:grid-cols-2 gap-x-6 gap-y-2 text-slate-300 list-disc list-inside">
+            <li>Class‑100/1000 cleanroom protocols</li>
+            <li>Wet bench safety & chemical handling</li>
+            <li>Metrology & microscopy for QA</li>
+            <li>Electrical test & documentation</li>
+          </ul>
+        </div>
+      </div>
+    </article>
+
+    <!-- Software & Systems (optional general projects) -->
+    <article class="project fade-in" data-tags="systems tools">
+      <div class="grid lg:grid-cols-2 gap-8 items-start">
+        <div>
+          <img src="assets/projects/systrack.png" alt="SysTrack server monitoring toolkit mock" class="w-full rounded-2xl border border-white/10 shadow-soft cursor-pointer modalable"/>
+        </div>
+        <div>
+          <h2 class="text-2xl font-semibold">SysTrack – Linux Server Monitoring Toolkit</h2>
+          <p class="mt-3 text-slate-300">Python toolkit for real‑time telemetry (temp/memory/process) with multithreaded collectors and lightweight microservices. Useful for running longer EDA jobs and capturing performance bottlenecks.</p>
+          <div class="mt-4 flex flex-wrap gap-2 text-sm">
+            <span class="px-2 py-1 rounded bg-white/5">Python</span>
+            <span class="px-2 py-1 rounded bg-white/5">Linux</span>
+            <span class="px-2 py-1 rounded bg-white/5">REST</span>
+          </div>
+        </div>
+      </div>
+    </article>
   </main>
 
+  <!-- Image Modal -->
+  <div id="imgModal" class="fixed inset-0 bg-black/80 hidden items-center justify-center p-4 z-40">
+    <button aria-label="Close" class="absolute top-4 right-4 bg-white/10 hover:bg-white/20 p-2 rounded">✕</button>
+    <img id="modalImg" src="" alt="Project image" class="max-h-[85vh] max-w-[95vw] rounded-xl border border-white/10 shadow-soft" />
+  </div>
+
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-white/5">
+    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-8 text-sm text-slate-400 flex flex-wrap gap-4 items-center justify-between">
+      <p>© <span id="y"></span> Tebibu. All non‑public work summarized at a high level.</p>
+      <div class="flex items-center gap-2">
+        <span class="hidden sm:inline">Need more detail?</span>
+        <a href="contact.html" class="text-cyan-300 hover:text-cyan-200">Request a private briefing →</a>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    const path = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav a').forEach(a => {
-      if (a.getAttribute('href') === path) a.classList.add('active');
+    // year
+    document.getElementById('y').textContent = new Date().getFullYear();
+
+    // filter logic
+    const buttons = document.querySelectorAll('.filter-btn');
+    const projects = document.querySelectorAll('.project');
+    let active = 'all';
+    function applyFilter() {
+      projects.forEach(p => {
+        const tags = (p.dataset.tags || '').split(/\s+/);
+        const show = active === 'all' || tags.includes(active);
+        p.style.display = show ? '' : 'none';
+      });
+    }
+    buttons.forEach(b => b.addEventListener('click', () => {
+      buttons.forEach(x => x.classList.remove('bg-cyan-500/20','text-cyan-200'));
+      b.classList.add('bg-cyan-500/20','text-cyan-200');
+      active = b.dataset.filter;
+      applyFilter();
+    }));
+    applyFilter();
+
+    // simple image modal
+    const modal = document.getElementById('imgModal');
+    const modalImg = document.getElementById('modalImg');
+    document.querySelectorAll('.modalable').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modal.classList.remove('hidden');
+        modal.classList.add('flex');
+      });
+    });
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal || e.target.tagName === 'BUTTON') {
+        modal.classList.add('hidden');
+        modal.classList.remove('flex');
+        modalImg.src = '';
+      }
     });
   </script>
 </body>
