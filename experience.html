@@ -4,19 +4,25 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abel – Experience</title>
-  <meta name="description" content="Professional experience in signal and power integrity, EDA automation, and semiconductor fabrication." />
+  <meta name="description" content="Professional experience in high-speed signal integrity, power integrity, and EDA automation." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    :root { --ink:#0f172a; --muted:#64748b; --accent:#06b6d4; }
-    html{scroll-behavior:smooth}
-    body{font-family:Inter,system-ui,Segoe UI,Roboto,Helvetica,Arial}
-    .shadow-soft{box-shadow:0 10px 30px rgba(2,6,23,.12)}
-    .tag{border:1px solid rgba(2,132,199,.25)}
-    .fade-in{opacity:0; transform:translateY(8px); animation:fade .6s forwards}
-    @keyframes fade{to{opacity:1; transform:none}}
+    :root { --accent:#06b6d4; }
+    body { font-family: Inter, system-ui, Segoe UI, sans-serif; background-color: #0b1120; color: #e2e8f0; }
+    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.3); }
+    .tag { border:1px solid rgba(2,132,199,.25); }
+    .fade-in { opacity:0; transform:translateY(8px); animation:fade .8s forwards; }
+    @keyframes fade { to { opacity:1; transform:none; } }
+    .hero-bg {
+      background-image: url('assets/bg_wave.jpg'); /* Replace with your circuit/wave background */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+    }
   </style>
 </head>
 
@@ -35,108 +41,107 @@
     </div>
   </nav>
 
-  <!-- Hero -->
-  <section class="pt-28 pb-16 text-center">
+  <!-- Hero Section -->
+  <section class="hero-bg pt-28 pb-20 text-center bg-black/60 backdrop-blur">
     <div class="max-w-4xl mx-auto px-6">
-      <h1 class="text-4xl font-bold text-cyan-400 mb-4">Professional Experience</h1>
-      <p class="text-slate-300 text-lg leading-relaxed">
-        From wafer to workstation — bridging electromagnetic design, automation, and analysis.
-        This timeline highlights engineering roles and independent work focused on power and signal integrity systems.
+      <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-4 drop-shadow-lg">Professional Experience</h1>
+      <p class="text-slate-200 text-lg leading-relaxed max-w-3xl mx-auto">
+        Engineering the invisible — delivering data-driven signal and power integrity solutions for high-speed systems.
       </p>
     </div>
   </section>
 
-  <!-- Experience Timeline -->
-  <main class="max-w-5xl mx-auto px-6 space-y-16">
+  <!-- Experience Sections -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
 
-    <!-- Hardware Design & SIPI Engineering -->
-    <article class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Hardware Design & SIPI Engineering</h2>
-      <p class="text-slate-400 italic mb-2">Confidential Hardware Firm (Fortune 500)</p>
+    <!-- DDR5 SI Development -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">DDR5 DDIMM Signal Integrity Development & Automation</h2>
+      <p class="text-slate-400 italic mb-2">Signal Integrity Engineer • High-Speed Memory Systems</p>
       <p class="text-slate-300 mb-4">
-        End-to-end PDN and SI engineering across multi-rail systems — from VRM to die.
-        Modeled impedance, optimized capacitor portfolios, and automated Z-mask validation tools for high-speed packaging.
+        Led automation and modeling for IBM’s 80-site DDR5 DDIMM — enabling first-pass success at 4800 Mbps. Designed a Python/Tkinter W-Element GUI integrated with PyAEDT to automate field extraction and SPICE model generation, reducing runtime by 80%.
       </p>
-      <ul class="list-disc list-inside text-slate-300 space-y-1 mb-4">
-        <li>Modeled VRM–board–package–die PDN impedance with correlation to lab measurements</li>
-        <li>Developed decoupling and anti-resonance strategies across multiple domains</li>
-        <li>Built Python automation for PDN extraction, impedance visualization, and reporting</li>
-        <li>Collaborated with packaging, signal integrity, and board layout teams on cross-domain reviews</li>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Developed extraction automation for Ansys 2D solver via PyAEDT</li>
+        <li>Optimized byte-lane topology and via design for signal isolation</li>
+        <li>Validated DRAM channels across IBIS models and PVT corners</li>
+        <li>Reduced simulation closure time by 30% vs previous DDR5 programs</li>
       </ul>
       <div class="flex flex-wrap gap-2 text-sm">
         <span class="px-2 py-1 bg-white/5 rounded">Python</span>
         <span class="px-2 py-1 bg-white/5 rounded">PyAEDT</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Ansys SIwave</span>
-        <span class="px-2 py-1 bg-white/5 rounded">HFSS</span>
-        <span class="px-2 py-1 bg-white/5 rounded">MATLAB</span>
-        <span class="px-2 py-1 bg-white/5 rounded">ADS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Ansys SIwave/HFSS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">DDR5 IBIS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">JEDEC Compliance</span>
       </div>
-    </article>
+    </section>
 
-    <!-- EDA Automation & Visualization -->
-    <article class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">EDA Automation & Visualization Tools</h2>
-      <p class="text-slate-400 italic mb-2">Independent Development</p>
+    <!-- PKG PI Design -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">Package & Board Power Integrity for Nexus and Florence Systems</h2>
+      <p class="text-slate-400 italic mb-2">Power Integrity Engineer • Multi-Rail PDN Design</p>
       <p class="text-slate-300 mb-4">
-        Created workflow automation utilities and visualization GUIs to accelerate SI/PI analysis.
-        Focused on scalable data processing, interactive visualization, and headless EDA execution.
+        Designed and validated multi-domain PDN architectures for high-speed IBM system modules. Unified VRM-to-die modeling with frequency and time-domain validation using Ansys Nexim, PowerSI, and HSPICE.
       </p>
-      <ul class="list-disc list-inside text-slate-300 space-y-1 mb-4">
-        <li>Built a full PDN Impedance Visualizer integrating VRM–board–package–die models</li>
-        <li>Developed a W-element extraction GUI for automated Q2D runs and material sweeps</li>
-        <li>Automated stitched-via and anti-pad generation for PDN layout design</li>
-        <li>Enhanced SI workflows through headless automation and parameter scripting</li>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Built end-to-end VRM–package–die models combining Nexim, PowerSI, and LTSpice</li>
+        <li>Optimized multi-technology decoupling strategy (MLCC, MITLIC, SI decap, Semco)</li>
+        <li>Achieved 20–40% impedance reduction and 5× ripple improvement</li>
+        <li>Established OPI/PDC-based methodologies for PDN loop-inductance analysis</li>
+      </ul>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-2 py-1 bg-white/5 rounded">Ansys Nexim</span>
+        <span class="px-2 py-1 bg-white/5 rounded">PowerSI</span>
+        <span class="px-2 py-1 bg-white/5 rounded">OptimizePI</span>
+        <span class="px-2 py-1 bg-white/5 rounded">LTSpice</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Simplis</span>
+      </div>
+    </section>
+
+    <!-- PDN Visualizer GUI -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">Full PDN Impedance Visualizer GUI</h2>
+      <p class="text-slate-400 italic mb-2">Lead Developer • Internal SIPI Automation Tool</p>
+      <p class="text-slate-300 mb-4">
+        Designed a real-time Python/Tkinter GUI that models complete VRM-to-die impedance, overlaying Z-targets and compliance masks in-app.
+        Eliminated solver dependencies and compressed simulation from hours to seconds.
+      </p>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Developed RLC-based impedance engine with live ΔZ / ΔFreq visualization</li>
+        <li>Implemented SPICE export for HSPICE and LTSpice transient validation</li>
+        <li>Added automated PDF report generation and capacitor library integration</li>
+        <li>Adopted across IBM SIPI teams for rapid PDN exploration and mentoring</li>
       </ul>
       <div class="flex flex-wrap gap-2 text-sm">
         <span class="px-2 py-1 bg-white/5 rounded">Python</span>
         <span class="px-2 py-1 bg-white/5 rounded">Tkinter</span>
-        <span class="px-2 py-1 bg-white/5 rounded">NumPy</span>
         <span class="px-2 py-1 bg-white/5 rounded">Matplotlib</span>
-        <span class="px-2 py-1 bg-white/5 rounded">PyAEDT API</span>
+        <span class="px-2 py-1 bg-white/5 rounded">SPICE</span>
+        <span class="px-2 py-1 bg-white/5 rounded">EDA Automation</span>
       </div>
-    </article>
+    </section>
 
-    <!-- Wafer Fabrication -->
-    <article class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Wafer Microfabrication & Semiconductor Processing</h2>
-      <p class="text-slate-400 italic mb-2">University Cleanroom Laboratory</p>
+    <!-- Mentorship & Leadership -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">Mentorship & Technical Leadership</h2>
+      <p class="text-slate-400 italic mb-2">IBM SIPI Organization</p>
       <p class="text-slate-300 mb-4">
-        Hands-on fabrication experience building, etching, and testing silicon wafers.  
-        Conducted photolithography, alignment, and chemical etching processes under strict cleanroom protocols.
+        Mentored and trained new engineers in PDN extraction, HSPICE, and Python-based automation workflows.
+        Conducted enablement sessions introducing internal GUI tools and PI methodology.
       </p>
-      <ul class="list-disc list-inside text-slate-300 space-y-1 mb-4">
-        <li>Executed complete wafer process flow: mask alignment, bake, etch, and inspection</li>
-        <li>Performed electrical and physical verification using microscopy and probing tools</li>
-        <li>Validated process fidelity through feature size and oxide uniformity analysis</li>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Led training for junior engineers on HSPICE, PowerSI, and PyAEDT scripting</li>
+        <li>Enabled adoption of internal PDN automation GUIs across SIPI teams</li>
+        <li>Earned IBM STAR Leadership Badge (Intermediate, 2024)</li>
+        <li>Presented PDN & SI methodologies across Power, Z, and Quantum teams</li>
       </ul>
       <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-2 py-1 bg-white/5 rounded">Photolithography</span>
-        <span class="px-2 py-1 bg-white/5 rounded">BOE Etch</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Mask Alignment</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Cleanroom</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Leadership</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Mentorship</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Training</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Enablement</span>
       </div>
-    </article>
-
-    <!-- Systems & Integration -->
-    <article class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Systems Integration & Toolchain Scripting</h2>
-      <p class="text-slate-400 italic mb-2">Personal Research</p>
-      <p class="text-slate-300 mb-4">
-        Developed lightweight infrastructure for continuous monitoring and EDA job automation.  
-        Experimented with telemetry scripts and multi-threaded collection tools to support high-load simulations.
-      </p>
-      <ul class="list-disc list-inside text-slate-300 space-y-1 mb-4">
-        <li>Integrated live telemetry for thermal and performance analysis in Linux systems</li>
-        <li>Built data processing scripts for impedance and SI correlation across frequencies</li>
-        <li>Automated report generation for multi-rail PDN sweeps and SI experiments</li>
-      </ul>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-2 py-1 bg-white/5 rounded">Python</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Linux</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Bash</span>
-        <span class="px-2 py-1 bg-white/5 rounded">REST</span>
-      </div>
-    </article>
+    </section>
 
   </main>
 
@@ -144,12 +149,10 @@
   <footer class="mt-20 border-t border-white/5">
     <div class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-400 flex flex-wrap gap-4 items-center justify-between">
       <p>© <span id="y"></span> Tebibu. All non-public work summarized at a high level.</p>
-      <a href="contact.html" class="text-cyan-300 hover:text-cyan-200">Get in touch →</a>
+      <a href="contact.html" class="text-cyan-300 hover:text-cyan-200">Reach out →</a>
     </div>
   </footer>
 
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
