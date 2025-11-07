@@ -1,26 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Skills — Abel Tesfai</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => AOS.init({ duration: 800, once: true }));
+  </script>
   <style>
-    body{font-family:'IBM Plex Sans',sans-serif;background:#0B0C10;color:#EAEAEA;}
-    .accent{color:#00B4D8;}
-    .card{background:rgba(25,28,36,.85);border:1px solid #1F2833;border-radius:1rem;}
-    .card:hover{border-color:#00B4D8;box-shadow:0 8px 24px rgba(0,180,216,.18);transform:translateY(-3px);transition:.25s;}
-    .nav a.active{color:#00B4D8;}
+    body { font-family: 'IBM Plex Sans', sans-serif; background: #0B0C10; color: #EAEAEA; scroll-behavior: smooth; }
+    .accent { color: #00B4D8; }
+    .card { background: rgba(25,28,36,.85); border: 1px solid #1F2833; border-radius: 1rem; transition: all .3s ease; }
+    .card:hover { border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0,180,216,.25); transform: translateY(-3px); }
+    .nav a.active { color: #00B4D8; border-bottom: 2px solid #00B4D8; padding-bottom: 2px; }
   </style>
 </head>
+
 <body>
-  <!-- NAVBAR (use on every page) -->
+  <!-- NAVBAR -->
   <nav class="nav fixed top-0 left-0 right-0 z-50 bg-[#0B0C10]/85 backdrop-blur border-b border-[#1F2833]">
     <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="font-semibold text-lg text-cyan-400">Abel Tesfai</a>
       <div class="hidden md:flex gap-6 text-sm text-gray-300">
         <a href="index.html">Home</a>
-        <a href="index.html#experience">Experience</a>
+        <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
@@ -28,54 +35,108 @@
     </div>
   </nav>
 
-  <header class="max-w-6xl mx-auto px-6 py-10">
-    <h1 class="text-3xl font-bold">Core Skills</h1>
-    <p class="text-gray-400 mt-2">Signal Integrity • Power Integrity • Packaging • Automation</p>
+  <!-- HEADER -->
+  <header class="max-w-6xl mx-auto px-6 pt-28 pb-10 text-center" data-aos="fade-up">
+    <h1 class="text-3xl font-bold text-white">Technical Skills & Expertise</h1>
+    <p class="text-gray-400 mt-3">
+      Core competencies across <span class="accent">Signal & Power Integrity</span>, 
+      <span class="accent">automation</span>, and <span class="accent">end-to-end PDN design & validation</span>.
+    </p>
   </header>
 
-  <main class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-6 pb-16">
-    <section class="card p-6">
-      <h2 class="text-xl font-semibold">Technical</h2>
-      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-        <li>PDN modeling (AC/DC), Z-mask definition, transient validation</li>
-        <li>ESL/ESR characterization; multi-pin decap (Si-cap, MTLIC) vs MLCC</li>
-        <li>Loop inductance extraction; via/shape optimization</li>
-        <li>Waveguide & W-element modeling</li>
+  <!-- MAIN -->
+  <main class="max-w-6xl mx-auto px-6 pb-20 space-y-12">
+
+    <!-- Simulation & Modeling -->
+    <section class="card p-8" data-aos="fade-up">
+      <h2 class="text-2xl font-semibold mb-4 accent">Simulation & Modeling</h2>
+      <p class="text-gray-400 mb-4 text-sm">
+        Expertise in full-stack PI/SI simulation flows — from chip/package/board co-simulation to Z-mask validation and transient correlation.
+      </p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>HFSS, Siwave, PowerSI, PowerDC, OptimizePI, Simplis, Hspice, Ansys Circuit, Q2D, 2D Extractor</li>
+        <li><span class="accent">W-Element modeling</span> for high-frequency PDN and waveguide structures — correlation to transient results</li>
+        <li>AC/DC impedance validation, Z-targeting, and resonance margin analysis</li>
+        <li>Developed full PDN simulation flows integrating frequency-domain and time-domain results</li>
       </ul>
     </section>
 
-    <section class="card p-6">
-      <h2 class="text-xl font-semibold">Tools</h2>
-      <ul class="list-disc list-inside text-gray-300 mt-2 space-y-1">
-        <li>ANSYS: HFSS, Q2D, Nexxim, (PyAEDT)</li>
-        <li>Cadence/Allegro, PowerDC/Sigrity (as applicable)</li>
-        <li>Python, Tkinter, Pandas, Matplotlib</li>
-        <li>Touchstone (.sNp) processing, SPICE macromodels</li>
+    <!-- Automation & Programming -->
+    <section class="card p-8" data-aos="fade-up" data-aos-delay="100">
+      <h2 class="text-2xl font-semibold mb-4 accent">Automation & Programming</h2>
+      <p class="text-gray-400 mb-4 text-sm">
+        Building internal tools and GUIs that automate simulation, data extraction, and reporting across PDN and SI workflows.
+      </p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Python (PyAEDT, Tkinter, Pandas, Matplotlib), C, Perl, Bash</li>
+        <li>Creator of the <span class="accent">“Full PDN GUI”</span> — a multi-threaded Python/Tkinter tool for Z-mask generation, decap optimization, and impedance visualization</li>
+        <li>Built automation pipelines to interface with Ansys AEDT APIs for batch simulation and report generation</li>
+        <li>Experience integrating simulation data with Power BI dashboards for engineering metrics</li>
       </ul>
     </section>
 
-    <section class="card p-6 md:col-span-2">
-      <h2 class="text-xl font-semibold">Focus Areas</h2>
-      <div class="grid md:grid-cols-3 gap-4 mt-2 text-gray-300">
-        <ul class="list-disc list-inside space-y-1">
-          <li>Near-I/O decoupling</li><li>Impedance shaping</li><li>Transient ripple reduction</li>
-        </ul>
-        <ul class="list-disc list-inside space-y-1">
-          <li>VRM→Die path integrity</li><li>DIMM PDN</li><li>Measurement correlation</li>
-        </ul>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Automation & reporting</li><li>Design flows & risk closure</li><li>Packaging co-design</li>
-        </ul>
+    <!-- Layout & Design -->
+    <section class="card p-8" data-aos="fade-up" data-aos-delay="200">
+      <h2 class="text-2xl font-semibold mb-4 accent">Layout & Design Integration</h2>
+      <p class="text-gray-400 mb-4 text-sm">
+        Strong background in end-to-end PDN and decoupling network design across package and board levels.
+      </p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Cadence Allegro, stack-up design, Z-targeting, decap placement and optimization</li>
+        <li>Developed capacitor allocation and ESL/ESR optimization strategies for core, DDR, and I/O rails</li>
+        <li>Collaborated with chip/package/board teams on multi-domain PI/SI closure</li>
+        <li>Experience defining power integrity constraints and verifying compliance through simulation</li>
+      </ul>
+    </section>
+
+    <!-- Measurement & Validation -->
+    <section class="card p-8" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="text-2xl font-semibold mb-4 accent">Measurement & Validation</h2>
+      <p class="text-gray-400 mb-4 text-sm">
+        Skilled in correlating lab measurements with simulated results to ensure model accuracy and design integrity.
+      </p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>VNA, TDR, Oscilloscope, PDN impedance and transient measurement correlation</li>
+        <li>Hands-on experience soldering, reworking, and preparing validation test boards</li>
+        <li>Developed test procedures for capacitor characterization and resonance analysis</li>
+        <li>Used lab data to tune simulation models and improve PI/SI predictability</li>
+      </ul>
+    </section>
+
+    <!-- Summary Strengths -->
+    <section class="card p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+      <h2 class="text-2xl font-semibold mb-6 accent">Core Strengths</h2>
+      <div class="grid md:grid-cols-3 gap-6 text-gray-300">
+        <div>
+          <h3 class="font-semibold text-lg text-white mb-2">End-to-End PDN Design</h3>
+          <p class="text-sm">From VRM to die — simulation, optimization, and validation of complete power delivery paths.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-white mb-2">Automation & Tool Development</h3>
+          <p class="text-sm">Creator of automation tools integrating simulation, analysis, and report generation.</p>
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg text-white mb-2">Cross-Domain Collaboration</h3>
+          <p class="text-sm">Experienced working across silicon, packaging, and system teams for cohesive SI/PI closure.</p>
+        </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
   <footer class="border-t border-[#1F2833]">
-    <div class="max-w-6xl mx-auto px-6 py-6 text-sm text-gray-400 flex items-center justify-between">
-      <span>© 2025 Abel Tesfai</span>
-      <a class="accent" href="resume.pdf" download>Download Resume</a>
+    <div class="max-w-6xl mx-auto px-6 py-6 text-center text-gray-400">
+      <p>© 2025 Abel Tesfai — Built with TailwindCSS, AOS & GitHub Pages</p>
     </div>
   </footer>
-  <script>const p=(location.pathname.split('/').pop()||'skills.html');document.querySelectorAll('.nav a').forEach(a=>{if(a.getAttribute('href')===p)a.classList.add('active');});</script>
+
+  <!-- ACTIVE NAV SCRIPT -->
+  <script>
+    const path = location.pathname.split('/').pop() || 'skills.html';
+    document.querySelectorAll('.nav a').forEach(a => {
+      const normalized = a.getAttribute('href').split('#')[0];
+      if (normalized === path) a.classList.add('active');
+    });
+  </script>
 </body>
 </html>
