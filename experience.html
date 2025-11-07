@@ -4,24 +4,23 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Abel – Experience</title>
-  <meta name="description" content="Professional experience in high-speed signal integrity, power integrity, and EDA automation." />
+  <meta name="description" content="Professional experience in high-speed signal integrity, power integrity, and semiconductor design." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     :root { --accent:#06b6d4; }
-    body { font-family: Inter, system-ui, Segoe UI, sans-serif; background-color: #0b1120; color: #e2e8f0; }
-    .shadow-soft { box-shadow: 0 10px 30px rgba(0,0,0,.3); }
-    .tag { border:1px solid rgba(2,132,199,.25); }
+    body { font-family: Inter, system-ui, Segoe UI, sans-serif; background-color:#0b1120; color:#e2e8f0; }
+    .shadow-soft { box-shadow:0 10px 30px rgba(0,0,0,.3); }
     .fade-in { opacity:0; transform:translateY(8px); animation:fade .8s forwards; }
-    @keyframes fade { to { opacity:1; transform:none; } }
+    @keyframes fade { to{opacity:1;transform:none;} }
     .hero-bg {
-      background-image: url('assets/bg_wave.jpg'); /* Replace with your circuit/wave background */
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
+      background-image:url('assets/bg_wave.jpg'); /* subtle cyan waveform or circuit pattern */
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
     }
   </style>
 </head>
@@ -41,105 +40,130 @@
     </div>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero-bg pt-28 pb-20 text-center bg-black/60 backdrop-blur">
     <div class="max-w-4xl mx-auto px-6">
       <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-4 drop-shadow-lg">Professional Experience</h1>
       <p class="text-slate-200 text-lg leading-relaxed max-w-3xl mx-auto">
-        Engineering the invisible — delivering data-driven signal and power integrity solutions for high-speed systems.
+        Bridging high-speed design, power integrity, and automation — engineering reliable systems through physics-based modeling and simulation.
       </p>
     </div>
   </section>
 
-  <!-- Experience Sections -->
   <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
 
-    <!-- DDR5 SI Development -->
+    <!-- Signal Integrity Engineering -->
     <section class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">DDR5 DDIMM Signal Integrity Development & Automation</h2>
-      <p class="text-slate-400 italic mb-2">Signal Integrity Engineer • High-Speed Memory Systems</p>
-      <p class="text-slate-300 mb-4">
-        Led automation and modeling for IBM’s 80-site DDR5 DDIMM — enabling first-pass success at 4800 Mbps. Designed a Python/Tkinter W-Element GUI integrated with PyAEDT to automate field extraction and SPICE model generation, reducing runtime by 80%.
+      <h2 class="text-2xl font-semibold text-cyan-300">Signal Integrity Engineering</h2>
+      <p class="text-slate-300 mt-3 mb-4">
+        Performed full extraction, modeling, and analysis of high-speed channels including DDR, LPDDR, and PCIe interfaces.
+        Built simulation decks for end-to-end channel validation, analyzing crosstalk, reflections, insertion loss, and impedance matching.
       </p>
       <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
-        <li>Developed extraction automation for Ansys 2D solver via PyAEDT</li>
-        <li>Optimized byte-lane topology and via design for signal isolation</li>
-        <li>Validated DRAM channels across IBIS models and PVT corners</li>
-        <li>Reduced simulation closure time by 30% vs previous DDR5 programs</li>
+        <li>Extracted 2D and 3D models from PCB and package for field-solver correlation</li>
+        <li>Set up frequency and time-domain simulations to verify eye diagrams and timing margins</li>
+        <li>Ran optimization sweeps to eliminate inductive or capacitive resonances in anti-pads and ground stitching</li>
+        <li>Validated impedance curves, S-parameters, and coupling matrices for multi-lane topologies</li>
+      </ul>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-2 py-1 bg-white/5 rounded">Ansys SIwave</span>
+        <span class="px-2 py-1 bg-white/5 rounded">HFSS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Q2D Extractor</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Nexim</span>
+        <span class="px-2 py-1 bg-white/5 rounded">ADS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Python</span>
+      </div>
+    </section>
+
+    <!-- Power Integrity & Decoupling -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">Power Integrity & Decoupling Design</h2>
+      <p class="text-slate-300 mt-3 mb-4">
+        Modeled complete power-delivery networks from VRM through board, package, and die.
+        Ran AC, DC, and transient simulations to evaluate Z-mask compliance, voltage droop, and noise coupling across domains.
+      </p>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Built frequency-domain impedance models to optimize PDN flatness across multiple rails</li>
+        <li>Reduced loop, lateral, and vertical inductance using via optimization and current-return control</li>
+        <li>Simulated VRM filtering stages and multi-domain interactions under dynamic load transitions</li>
+        <li>Validated current density and tolerance through DC and transient simulations</li>
+        <li>Delivered data-driven capacitor placement and decoupling strategies for broadband stability</li>
+      </ul>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-2 py-1 bg-white/5 rounded">PowerSI</span>
+        <span class="px-2 py-1 bg-white/5 rounded">PowerDC</span>
+        <span class="px-2 py-1 bg-white/5 rounded">OptimizePI</span>
+        <span class="px-2 py-1 bg-white/5 rounded">HFSS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">SIwave</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Simplis</span>
+        <span class="px-2 py-1 bg-white/5 rounded">LTSpice</span>
+        <span class="px-2 py-1 bg-white/5 rounded">HSPICE</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Python</span>
+      </div>
+    </section>
+
+    <!-- EDA Automation & Scripting -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">EDA Automation & Scripting</h2>
+      <p class="text-slate-300 mt-3 mb-4">
+        Automated extraction, simulation, and reporting pipelines to accelerate SI/PI analysis cycles.
+        Designed Python-based GUIs and Linux automation scripts integrating PyAEDT and multi-threaded solvers for headless operation.
+      </p>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Developed custom Tkinter tools for impedance visualization and SPICE export</li>
+        <li>Scripted PyAEDT flows to automate geometry setup and solver execution</li>
+        <li>Created report generation scripts for Z-mask overlays, capacitor tables, and correlation charts</li>
+        <li>Implemented Linux-based batch pipelines for simulation and data post-processing</li>
       </ul>
       <div class="flex flex-wrap gap-2 text-sm">
         <span class="px-2 py-1 bg-white/5 rounded">Python</span>
         <span class="px-2 py-1 bg-white/5 rounded">PyAEDT</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Ansys SIwave/HFSS</span>
-        <span class="px-2 py-1 bg-white/5 rounded">DDR5 IBIS</span>
-        <span class="px-2 py-1 bg-white/5 rounded">JEDEC Compliance</span>
-      </div>
-    </section>
-
-    <!-- PKG PI Design -->
-    <section class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Package & Board Power Integrity for Nexus and Florence Systems</h2>
-      <p class="text-slate-400 italic mb-2">Power Integrity Engineer • Multi-Rail PDN Design</p>
-      <p class="text-slate-300 mb-4">
-        Designed and validated multi-domain PDN architectures for high-speed IBM system modules. Unified VRM-to-die modeling with frequency and time-domain validation using Ansys Nexim, PowerSI, and HSPICE.
-      </p>
-      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
-        <li>Built end-to-end VRM–package–die models combining Nexim, PowerSI, and LTSpice</li>
-        <li>Optimized multi-technology decoupling strategy (MLCC, MITLIC, SI decap, Semco)</li>
-        <li>Achieved 20–40% impedance reduction and 5× ripple improvement</li>
-        <li>Established OPI/PDC-based methodologies for PDN loop-inductance analysis</li>
-      </ul>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-2 py-1 bg-white/5 rounded">Ansys Nexim</span>
-        <span class="px-2 py-1 bg-white/5 rounded">PowerSI</span>
-        <span class="px-2 py-1 bg-white/5 rounded">OptimizePI</span>
-        <span class="px-2 py-1 bg-white/5 rounded">LTSpice</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Simplis</span>
-      </div>
-    </section>
-
-    <!-- PDN Visualizer GUI -->
-    <section class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Full PDN Impedance Visualizer GUI</h2>
-      <p class="text-slate-400 italic mb-2">Lead Developer • Internal SIPI Automation Tool</p>
-      <p class="text-slate-300 mb-4">
-        Designed a real-time Python/Tkinter GUI that models complete VRM-to-die impedance, overlaying Z-targets and compliance masks in-app.
-        Eliminated solver dependencies and compressed simulation from hours to seconds.
-      </p>
-      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
-        <li>Developed RLC-based impedance engine with live ΔZ / ΔFreq visualization</li>
-        <li>Implemented SPICE export for HSPICE and LTSpice transient validation</li>
-        <li>Added automated PDF report generation and capacitor library integration</li>
-        <li>Adopted across IBM SIPI teams for rapid PDN exploration and mentoring</li>
-      </ul>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-2 py-1 bg-white/5 rounded">Python</span>
         <span class="px-2 py-1 bg-white/5 rounded">Tkinter</span>
         <span class="px-2 py-1 bg-white/5 rounded">Matplotlib</span>
-        <span class="px-2 py-1 bg-white/5 rounded">SPICE</span>
-        <span class="px-2 py-1 bg-white/5 rounded">EDA Automation</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Linux</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Automation</span>
       </div>
     </section>
 
-    <!-- Mentorship & Leadership -->
+    <!-- Decap & Component Qualification -->
     <section class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Mentorship & Technical Leadership</h2>
-      <p class="text-slate-400 italic mb-2">IBM SIPI Organization</p>
-      <p class="text-slate-300 mb-4">
-        Mentored and trained new engineers in PDN extraction, HSPICE, and Python-based automation workflows.
-        Conducted enablement sessions introducing internal GUI tools and PI methodology.
+      <h2 class="text-2xl font-semibold text-cyan-300">Decap Technology & Component Qualification</h2>
+      <p class="text-slate-300 mt-3 mb-4">
+        Participated in capacitor technology evaluation and qualification for advanced packages.
+        Characterized ESR, ESL, and pin configuration across multiple capacitor families and mounting topologies.
       </p>
       <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
-        <li>Led training for junior engineers on HSPICE, PowerSI, and PyAEDT scripting</li>
-        <li>Enabled adoption of internal PDN automation GUIs across SIPI teams</li>
-        <li>Earned IBM STAR Leadership Badge (Intermediate, 2024)</li>
-        <li>Presented PDN & SI methodologies across Power, Z, and Quantum teams</li>
+        <li>Tested MLCC, SI-Decap, MIM, and filler capacitors under varied frequency and temperature conditions</li>
+        <li>Analyzed placement trade-offs and degradation relative to I/O proximity and stack-up constraints</li>
+        <li>Validated capacitor effectiveness via impedance sweep and time-domain simulation</li>
+        <li>Compiled qualification reports summarizing ESL/ESR and inductive-loop sensitivity</li>
       </ul>
       <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-2 py-1 bg-white/5 rounded">Leadership</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Mentorship</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Training</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Enablement</span>
+        <span class="px-2 py-1 bg-white/5 rounded">PDN Modeling</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Component Analysis</span>
+        <span class="px-2 py-1 bg-white/5 rounded">ESL/ESR Testing</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Capacitor Qualification</span>
+      </div>
+    </section>
+
+    <!-- Wafer Fabrication & Process -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">Wafer Fabrication & Semiconductor Processes</h2>
+      <p class="text-slate-300 mt-3 mb-4">
+        Conducted hands-on fabrication and inspection in a cleanroom environment, performing every stage from lithography to electrical validation.
+      </p>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Performed mask alignment, photolithography, and BOE etching with process control</li>
+        <li>Managed furnace annealing cycles at variable temperature profiles for oxide growth and curing</li>
+        <li>Used optical microscopy and SEM for inspection and dimensional verification</li>
+        <li>Conducted wafer probing and electrical testing to verify process fidelity</li>
+      </ul>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-2 py-1 bg-white/5 rounded">Photolithography</span>
+        <span class="px-2 py-1 bg-white/5 rounded">BOE Etching</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Mask Alignment</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Metrology</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Probe Testing</span>
       </div>
     </section>
 
@@ -148,8 +172,8 @@
   <!-- Footer -->
   <footer class="mt-20 border-t border-white/5">
     <div class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-400 flex flex-wrap gap-4 items-center justify-between">
-      <p>© <span id="y"></span> Tebibu. All non-public work summarized at a high level.</p>
-      <a href="contact.html" class="text-cyan-300 hover:text-cyan-200">Reach out →</a>
+      <p>© <span id="y"></span> Tebibu. All content shown is generalized and confidentiality-safe.</p>
+      <a href="contact.html" class="text-cyan-300 hover:text-cyan-200">Connect →</a>
     </div>
   </footer>
 
