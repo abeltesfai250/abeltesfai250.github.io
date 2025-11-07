@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Skills — Abel Tesfai</title>
+  <title>Skills — Signal & Power Integrity Engineer</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
@@ -12,9 +12,9 @@
     document.addEventListener("DOMContentLoaded", () => AOS.init({ duration: 800, once: true }));
   </script>
   <style>
-    body { font-family: 'IBM Plex Sans', sans-serif; background: #0B0C10; color: #EAEAEA; scroll-behavior: smooth; }
+    body { font-family: 'IBM Plex Sans', sans-serif; background: #0B0C10; color: #EAEAEA; }
     .accent { color: #00B4D8; }
-    .card { background: rgba(25,28,36,.85); border: 1px solid #1F2833; border-radius: 1rem; transition: all .3s ease; }
+    .card { background: rgba(25,28,36,.9); border: 1px solid #1F2833; border-radius: 1rem; transition: all .3s ease; }
     .card:hover { border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0,180,216,.25); transform: translateY(-3px); }
     .nav a.active { color: #00B4D8; border-bottom: 2px solid #00B4D8; padding-bottom: 2px; }
   </style>
@@ -38,86 +38,127 @@
   <!-- HEADER -->
   <header class="max-w-6xl mx-auto px-6 pt-28 pb-10 text-center" data-aos="fade-up">
     <h1 class="text-3xl font-bold text-white">Technical Skills & Expertise</h1>
-    <p class="text-gray-400 mt-3">
-      Core competencies across <span class="accent">Signal & Power Integrity</span>, 
-      <span class="accent">automation</span>, and <span class="accent">end-to-end PDN design & validation</span>.
+    <p class="text-gray-400 mt-3 text-base">
+      Specialized in <span class="accent">Signal & Power Integrity</span>, 
+      <span class="accent">automation</span>, and 
+      <span class="accent">electromagnetic system modeling</span> — delivering optimized, simulation-driven designs across package and board domains.
     </p>
   </header>
 
-  <!-- MAIN -->
+  <!-- MAIN CONTENT -->
   <main class="max-w-6xl mx-auto px-6 pb-20 space-y-12">
 
-    <!-- Simulation & Modeling -->
+    <!-- SIMULATION & MODELING -->
     <section class="card p-8" data-aos="fade-up">
       <h2 class="text-2xl font-semibold mb-4 accent">Simulation & Modeling</h2>
       <p class="text-gray-400 mb-4 text-sm">
-        Expertise in full-stack PI/SI simulation flows — from chip/package/board co-simulation to Z-mask validation and transient correlation.
+        Deep experience in full-wave and circuit-level modeling of complex interconnects and power delivery networks.
       </p>
       <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>HFSS, Siwave, PowerSI, PowerDC, OptimizePI, Simplis, Hspice, Ansys Circuit, Q2D, 2D Extractor</li>
-        <li><span class="accent">W-Element modeling</span> for high-frequency PDN and waveguide structures — correlation to transient results</li>
-        <li>AC/DC impedance validation, Z-targeting, and resonance margin analysis</li>
-        <li>Developed full PDN simulation flows integrating frequency-domain and time-domain results</li>
+        <li>End-to-end PI/SI simulation flow — from voltage regulator to die interface</li>
+        <li>High-frequency <span class="accent">W-element extraction</span> and validation for transmission line modeling</li>
+        <li>Time-domain and AC-domain PDN impedance verification against target specifications</li>
+        <li>Package-to-board co-simulation including via, cavity, and decap modeling</li>
+        <li>Experienced with HFSS, Siwave, PowerSI, PowerDC, OptimizePI, Simplis, Hspice, LTSpice, and Nexim</li>
       </ul>
     </section>
 
-    <!-- Automation & Programming -->
+    <!-- PDN DESIGN -->
     <section class="card p-8" data-aos="fade-up" data-aos-delay="100">
-      <h2 class="text-2xl font-semibold mb-4 accent">Automation & Programming</h2>
+      <h2 class="text-2xl font-semibold mb-4 accent">PDN Design & Decoupling</h2>
       <p class="text-gray-400 mb-4 text-sm">
-        Building internal tools and GUIs that automate simulation, data extraction, and reporting across PDN and SI workflows.
+        Expertise in impedance shaping, multi-domain optimization, and decoupling network planning for high-speed systems.
       </p>
       <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>Python (PyAEDT, Tkinter, Pandas, Matplotlib), C, Perl, Bash</li>
-        <li>Creator of the <span class="accent">“Full PDN GUI”</span> — a multi-threaded Python/Tkinter tool for Z-mask generation, decap optimization, and impedance visualization</li>
-        <li>Built automation pipelines to interface with Ansys AEDT APIs for batch simulation and report generation</li>
-        <li>Experience integrating simulation data with Power BI dashboards for engineering metrics</li>
+        <li>Design and validation of multi-tier decoupling networks (VRM → package → die)</li>
+        <li>Capacitor optimization across ceramic, polymer, embedded, and MIM technologies</li>
+        <li>Loop-inductance reduction and return-path integrity improvement through strategic placement</li>
+        <li>Automated Z-mask generation and correlation to transient performance metrics</li>
+        <li>Validated frequency response from sub-MHz to multi-GHz using custom Python tooling</li>
       </ul>
     </section>
 
-    <!-- Layout & Design -->
+    <!-- AUTOMATION & TOOL DEVELOPMENT -->
     <section class="card p-8" data-aos="fade-up" data-aos-delay="200">
-      <h2 class="text-2xl font-semibold mb-4 accent">Layout & Design Integration</h2>
+      <h2 class="text-2xl font-semibold mb-4 accent">Automation & Tool Development</h2>
       <p class="text-gray-400 mb-4 text-sm">
-        Strong background in end-to-end PDN and decoupling network design across package and board levels.
+        Builder of custom engineering tools that bridge simulation, automation, and visualization to accelerate design closure.
       </p>
       <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>Cadence Allegro, stack-up design, Z-targeting, decap placement and optimization</li>
-        <li>Developed capacitor allocation and ESL/ESR optimization strategies for core, DDR, and I/O rails</li>
-        <li>Collaborated with chip/package/board teams on multi-domain PI/SI closure</li>
-        <li>Experience defining power integrity constraints and verifying compliance through simulation</li>
+        <li>Developed <span class="accent">Full PDN GUI</span> — a real-time impedance and Z-target visualization platform (Python/Tkinter)</li>
+        <li>Created <span class="accent">W-Element Extraction GUI</span> to automate PyAEDT-based Q2D modeling workflows</li>
+        <li>Built ground-stitch and via-optimization utilities for package and board designers</li>
+        <li>Automated S-parameter, SPICE, and CSV exports directly from EM solvers</li>
+        <li>Experienced in Python, Tkinter, Pandas, Matplotlib, NumPy, SciPy, and PyAEDT</li>
       </ul>
     </section>
 
-    <!-- Measurement & Validation -->
+    <!-- BOARD & PACKAGE DESIGN -->
     <section class="card p-8" data-aos="fade-up" data-aos-delay="300">
+      <h2 class="text-2xl font-semibold mb-4 accent">Board & Package Design Integration</h2>
+      <p class="text-gray-400 mb-4 text-sm">
+        Skilled in stack-up definition, PDN layer design, and integration of signal/power domains across complex hardware systems.
+      </p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>PCB and package stack-up optimization for low-inductance power delivery</li>
+        <li>Design rule generation and constraint-driven routing for high-speed interfaces</li>
+        <li>Integrated SI/PI analysis for DDR, PCIe, and SerDes interconnects</li>
+        <li>Used Allegro, Altium, and other layout tools for multi-domain verification</li>
+      </ul>
+    </section>
+
+    <!-- MEASUREMENT & VALIDATION -->
+    <section class="card p-8" data-aos="fade-up" data-aos-delay="400">
       <h2 class="text-2xl font-semibold mb-4 accent">Measurement & Validation</h2>
       <p class="text-gray-400 mb-4 text-sm">
-        Skilled in correlating lab measurements with simulated results to ensure model accuracy and design integrity.
+        Correlating lab data with simulated models to ensure electrical accuracy and robustness.
       </p>
       <ul class="list-disc list-inside text-gray-300 space-y-1">
-        <li>VNA, TDR, Oscilloscope, PDN impedance and transient measurement correlation</li>
-        <li>Hands-on experience soldering, reworking, and preparing validation test boards</li>
-        <li>Developed test procedures for capacitor characterization and resonance analysis</li>
-        <li>Used lab data to tune simulation models and improve PI/SI predictability</li>
+        <li>Hands-on with VNA, TDR, and oscilloscope for PDN and interconnect validation</li>
+        <li>Model-to-measurement correlation for frequency and transient domain results</li>
+        <li>Developed in-house measurement workflows for decap and cavity resonance testing</li>
       </ul>
     </section>
 
-    <!-- Summary Strengths -->
-    <section class="card p-8 text-center" data-aos="fade-up" data-aos-delay="400">
+    <!-- CROSS-DOMAIN COLLABORATION -->
+    <section class="card p-8" data-aos="fade-up" data-aos-delay="500">
+      <h2 class="text-2xl font-semibold mb-4 accent">Cross-Domain Collaboration & Leadership</h2>
+      <p class="text-gray-400 mb-4 text-sm">
+        Bridging simulation, validation, and layout teams through clear communication and data-driven insight.
+      </p>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Defined and documented full SI/PI simulation methodologies for new engineers</li>
+        <li>Collaborated with multi-disciplinary teams to accelerate PDN closure cycles</li>
+        <li>Presented internal technical sessions on automation, decoupling design, and Z-mask interpretation</li>
+      </ul>
+    </section>
+
+    <!-- PROGRAMMING -->
+    <section class="card p-8" data-aos="fade-up" data-aos-delay="600">
+      <h2 class="text-2xl font-semibold mb-4 accent">Programming & EDA Proficiency</h2>
+      <ul class="list-disc list-inside text-gray-300 space-y-1">
+        <li>Languages: Python (advanced), C/C++, Bash, Perl, MATLAB</li>
+        <li>Frameworks: Tkinter, PyAEDT, Matplotlib, Pandas, SciPy, NumPy</li>
+        <li>Tools: HFSS, Siwave, PowerSI, PowerDC, OptimizePI, Simplis, LTSpice, Allegro</li>
+        <li>Version Control & CI/CD: GitHub, Git, Jenkins, Bitbucket</li>
+      </ul>
+    </section>
+
+    <!-- STRENGTHS SUMMARY -->
+    <section class="card p-8 text-center" data-aos="fade-up" data-aos-delay="700">
       <h2 class="text-2xl font-semibold mb-6 accent">Core Strengths</h2>
       <div class="grid md:grid-cols-3 gap-6 text-gray-300">
         <div>
-          <h3 class="font-semibold text-lg text-white mb-2">End-to-End PDN Design</h3>
-          <p class="text-sm">From VRM to die — simulation, optimization, and validation of complete power delivery paths.</p>
+          <h3 class="font-semibold text-lg text-white mb-2">End-to-End PDN Expertise</h3>
+          <p class="text-sm">Complete modeling, optimization, and validation of power delivery from VRM to die.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-lg text-white mb-2">Automation & Tool Development</h3>
-          <p class="text-sm">Creator of automation tools integrating simulation, analysis, and report generation.</p>
+          <h3 class="font-semibold text-lg text-white mb-2">Automation Innovator</h3>
+          <p class="text-sm">Creator of custom tools that drastically reduce simulation time and human error.</p>
         </div>
         <div>
-          <h3 class="font-semibold text-lg text-white mb-2">Cross-Domain Collaboration</h3>
-          <p class="text-sm">Experienced working across silicon, packaging, and system teams for cohesive SI/PI closure.</p>
+          <h3 class="font-semibold text-lg text-white mb-2">Cross-Functional Leadership</h3>
+          <p class="text-sm">Collaborates across hardware, simulation, and software teams to drive design efficiency.</p>
         </div>
       </div>
     </section>
@@ -126,7 +167,7 @@
   <!-- FOOTER -->
   <footer class="border-t border-[#1F2833]">
     <div class="max-w-6xl mx-auto px-6 py-6 text-center text-gray-400">
-      <p>© 2025 Abel Tesfai — Built with TailwindCSS, AOS & GitHub Pages</p>
+      <p>© 2025 Abel Tesfai — Portfolio crafted for SI/PI innovation</p>
     </div>
   </footer>
 
