@@ -52,29 +52,6 @@
 
   <main class="max-w-6xl mx-auto px-6 py-12 space-y-16">
 
-    <!-- Signal Integrity Engineering -->
-    <section class="fade-in border-l-2 border-cyan-500 pl-6">
-      <h2 class="text-2xl font-semibold text-cyan-300">Signal Integrity Engineering</h2>
-      <p class="text-slate-300 mt-3 mb-4">
-        Performed full extraction, modeling, and analysis of high-speed channels including DDR, LPDDR, and PCIe interfaces.
-        Built simulation decks for end-to-end channel validation, analyzing crosstalk, reflections, insertion loss, and impedance matching.
-      </p>
-      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
-        <li>Extracted 2D and 3D models from PCB and package for field-solver correlation</li>
-        <li>Set up frequency and time-domain simulations to verify eye diagrams and timing margins</li>
-        <li>Ran optimization sweeps to eliminate inductive or capacitive resonances in anti-pads and ground stitching</li>
-        <li>Validated impedance curves, S-parameters, and coupling matrices for multi-lane topologies</li>
-      </ul>
-      <div class="flex flex-wrap gap-2 text-sm">
-        <span class="px-2 py-1 bg-white/5 rounded">Ansys SIwave</span>
-        <span class="px-2 py-1 bg-white/5 rounded">HFSS</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Q2D Extractor</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Nexim</span>
-        <span class="px-2 py-1 bg-white/5 rounded">ADS</span>
-        <span class="px-2 py-1 bg-white/5 rounded">Python</span>
-      </div>
-    </section>
-
     <!-- Power Integrity & Decoupling -->
     <section class="fade-in border-l-2 border-cyan-500 pl-6">
       <h2 class="text-2xl font-semibold text-cyan-300">Power Integrity & Decoupling Design</h2>
@@ -98,6 +75,29 @@
         <span class="px-2 py-1 bg-white/5 rounded">Simplis</span>
         <span class="px-2 py-1 bg-white/5 rounded">LTSpice</span>
         <span class="px-2 py-1 bg-white/5 rounded">HSPICE</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Python</span>
+      </div>
+    </section>
+    
+    <!-- Signal Integrity Engineering -->
+    <section class="fade-in border-l-2 border-cyan-500 pl-6">
+      <h2 class="text-2xl font-semibold text-cyan-300">Signal Integrity Engineering</h2>
+      <p class="text-slate-300 mt-3 mb-4">
+        Performed full extraction, modeling, and analysis of high-speed channels including DDR, LPDDR, and PCIe interfaces.
+        Built simulation decks for end-to-end channel validation, analyzing crosstalk, reflections, insertion loss, and impedance matching.
+      </p>
+      <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
+        <li>Extracted 2D and 3D models from PCB and package for field-solver correlation</li>
+        <li>Set up frequency and time-domain simulations to verify eye diagrams and timing margins</li>
+        <li>Ran optimization sweeps to eliminate inductive or capacitive resonances in anti-pads and ground stitching</li>
+        <li>Validated impedance curves, S-parameters, and coupling matrices for multi-lane topologies</li>
+      </ul>
+      <div class="flex flex-wrap gap-2 text-sm">
+        <span class="px-2 py-1 bg-white/5 rounded">Ansys SIwave</span>
+        <span class="px-2 py-1 bg-white/5 rounded">HFSS</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Q2D Extractor</span>
+        <span class="px-2 py-1 bg-white/5 rounded">Nexim</span>
+        <span class="px-2 py-1 bg-white/5 rounded">ADS</span>
         <span class="px-2 py-1 bg-white/5 rounded">Python</span>
       </div>
     </section>
@@ -133,7 +133,7 @@
         Characterized ESR, ESL, and pin configuration across multiple capacitor families and mounting topologies.
       </p>
       <ul class="list-disc list-inside text-slate-300 mb-4 space-y-1">
-        <li>Tested MLCC, SI-Decap, MIM, and filler capacitors under varied frequency and temperature conditions</li>
+        <li>Tested MLCC, SI-Decap, MIM, filler and other types of capacitors under varied frequency and temperature conditions</li>
         <li>Analyzed placement trade-offs and degradation relative to I/O proximity and stack-up constraints</li>
         <li>Validated capacitor effectiveness via impedance sweep and time-domain simulation</li>
         <li>Compiled qualification reports summarizing ESL/ESR and inductive-loop sensitivity</li>
