@@ -1,2 +1,2 @@
 # abeltesfai250.github.io
-My personal software and project portfolio website.
+My personal project portfolio website.
