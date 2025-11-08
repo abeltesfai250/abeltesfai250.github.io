@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Abel Tesfai | Signal & Power Integrity Engineer</title>
-  <meta name="description" content="Signal & Power Integrity Engineer at IBM | PDN Modeling, Decap Optimization, Automation" />
-  <link rel="icon" type="image/png" href="IMG_6740.jpg" />
+  <title>Abel Tesfai – Signal & Power Integrity Engineer</title>
+  <meta name="description" content="Signal & Power Integrity Engineer specializing in PDN modeling, high-speed channel design, and EDA automation at IBM." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", () => AOS.init({ duration: 800, once: true }));
-  </script>
   <style>
-    body { font-family: 'IBM Plex Sans', sans-serif; background: #0B0C10; color: #EAEAEA; scroll-behavior: smooth; }
-    .accent { color: #00B4D8; }
-    .card { background: rgba(25,28,36,.85); border: 1px solid #1F2833; border-radius: 1rem; transition: all .3s ease; }
-    .card:hover { border-color: #00B4D8; box-shadow: 0 4px 18px rgba(0,180,216,.25); transform: translateY(-3px); }
-    .nav a.active { color: #00B4D8; border-bottom: 2px solid #00B4D8; padding-bottom: 2px; }
+    body { font-family: Inter, system-ui, sans-serif; background-color:#0b1120; color:#e2e8f0; }
+    .shadow-soft { box-shadow:0 10px 30px rgba(0,0,0,.3); }
+    .hero-bg {
+      background-image:url('assets/projects/bg_experience.png');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+      background-attachment:fixed;
+    }
   </style>
 </head>
-<body>
 
-  <!-- NAVBAR (use on every page) -->
-  <nav class="nav fixed top-0 left-0 right-0 z-50 bg-[#0B0C10]/85 backdrop-blur border-b border-[#1F2833]">
+<body class="bg-slate-950 text-slate-100">
+  <!-- Navbar -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#0B0C10]/85 backdrop-blur border-b border-[#1F2833]">
     <div class="max-w-6xl mx-auto px-6 py-3 flex items-center justify-between">
       <a href="index.html" class="font-semibold text-lg text-cyan-400">Abel Tesfai</a>
       <div class="hidden md:flex gap-6 text-sm text-gray-300">
-        <a href="index.html">Home</a>
-        <a href="index.html#experience">Experience</a>
+        <a href="index.html" class="text-cyan-300">Home</a>
+        <a href="experience.html">Experience</a>
         <a href="projects.html">Projects</a>
         <a href="skills.html">Skills</a>
         <a href="contact.html">Contact</a>
@@ -37,128 +37,48 @@
     </div>
   </nav>
 
-  <!-- Header -->
-  <header id="top" class="text-center pt-28 pb-16 px-6">
-    <img src="IMG_6740.jpg" alt="Abel Tesfai" class="mx-auto rounded-full w-36 h-36 md:w-44 md:h-44 object-cover border-4 border-cyan-400 shadow-lg mb-6">
-    <h1 class="text-4xl font-bold text-white">Abel Tesfai</h1>
-    <p class="accent text-lg mt-2">Signal & Power Integrity Engineer @ IBM</p>
-    <p class="text-gray-400 text-sm mt-4 max-w-2xl mx-auto italic">
-      “From VRM modeling to decap optimization — integrating Signal & Power Integrity for next-generation systems.”
+  <!-- Hero Section -->
+  <section class="hero-bg relative pt-32 pb-24 text-center">
+    <div class="absolute inset-0 bg-black/70"></div>
+    <div class="relative max-w-4xl mx-auto px-6">
+      <img src="assets/projects/IMG_6740.jpg" alt="Abel Tesfai profile picture"
+           class="w-40 h-40 mx-auto rounded-full border-4 border-cyan-400 shadow-soft mb-6 object-cover"/>
+      <h1 class="text-4xl sm:text-5xl font-bold text-cyan-400 mb-3 drop-shadow-lg">Abel Tesfai</h1>
+      <h2 class="text-lg sm:text-xl font-medium text-slate-200 mb-6">
+        Signal & Power Integrity Engineer | High-Speed Channel Design | PDN Modeling & EDA Automation
+      </h2>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="resume.pdf" class="px-5 py-2 bg-cyan-500/20 border border-cyan-400 rounded hover:bg-cyan-400/30 text-cyan-200 transition">📄 Download Resume</a>
+        <a href="projects.html" class="px-5 py-2 bg-cyan-500/20 border border-cyan-400 rounded hover:bg-cyan-400/30 text-cyan-200 transition">📂 View Projects</a>
+        <a href="contact.html" class="px-5 py-2 bg-cyan-500/20 border border-cyan-400 rounded hover:bg-cyan-400/30 text-cyan-200 transition">📬 Contact Me</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="max-w-4xl mx-auto px-6 text-center py-16">
+    <p class="text-lg text-slate-300 leading-relaxed mb-6">
+      I began my journey at <span class="text-cyan-300 font-semibold">IBM</span> in July 2021, where I’ve been immersed in the world of 
+      <span class="text-cyan-300 font-semibold">Signal and Power Integrity</span> engineering. 
+      My work spans end-to-end channel modeling, PDN impedance optimization, and Python-based EDA automation for 
+      complex systems across board, package, and die. I joined IBM after completing my 
+      <span class="text-cyan-300 font-semibold">Bachelor’s and Master’s degrees</span> in Electrical and Electronics Engineering at 
+      <span class="text-cyan-300 font-semibold">Minnesota State University, Mankato</span> — where I developed deep expertise in 
+      high-speed design, semiconductor processes, and automation-driven engineering workflows.
     </p>
-    <a href="resume.pdf" download class="inline-block bg-cyan-500 hover:bg-cyan-600 text-white font-semibold py-2 px-5 mt-6 rounded-full shadow-md transition duration-200">
-      ⬇ Download Resume
-    </a>
-  </header>
+    <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Minnesota_State_University%2C_Mankato_seal.svg"
+         alt="Minnesota State University, Mankato logo"
+         class="w-24 mx-auto mt-4 opacity-90 hover:opacity-100 transition"/>
+  </section>
 
-  <main class="max-w-6xl mx-auto px-6 space-y-20">
-    <section id="experience" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b border-gray-800 pb-2 mb-6">Professional Experience</h2>
-      <div class="grid gap-6">
-        <!-- IBM -->
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold">IBM — Signal & Power Integrity Engineer</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            • Provided technical guidance to circuit, package, and board teams to ensure design met <span class="accent">signal & power integrity targets</span>.<br>
-            • Collaborated with validation teams to define test plans and support <span class="accent">lab debug</span> across silicon, board, and package interfaces.<br>
-            • Performed full-package and board-level <span class="accent">PI/SI analysis</span> across DDR, Core, and PCIe power domains.<br>
-            • Designed and optimized multi-tier decoupling networks — Diecap, package cap, and card cap.<br>
-            • Directed <span class="accent">loop inductance extraction</span>, capacitor placement refinement, and Z-targeting for high-current rails.<br>
-            • Led <span class="accent">signal integrity design</span> for high-speed interfaces, defined SILO structure, and validated routing against SI constraints.<br>
-            • Spearheaded signal integrity design and verification for high-speed interfaces; defined SILO structure and validated routing against SI constraints.
-            • Executed full-wave SI simulations to evaluate <span class="accent">eye margin, crosstalk, and channel impedance</span>.<br>
-            • Partnered with cross-functional teams (layout, silicon, packaging, board) to deliver optimized PDNs.
-          </p>
-        </div>
-    
-        <!-- IBM Internship -->
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold">IBM — Hardware Engineer Intern</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            • Supported the <span class="accent">Quantum Hardware</span> team with lab measurements and validation.<br>
-            • Performed <span class="accent">VNA, TDR, and oscilloscope measurements</span> for simulation correlation.<br>
-            • Gained hands-on experience soldering and assembling test boards for decap and resistor validation.<br>
-            • Assisted with system-level debug, data collection, and test setup configuration.
-          </p>
-        </div>
-    
-        <!-- University -->
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold">Minnesota State University, Mankato — Electrical & Electronics Engineering</h3>
-          <p class="text-gray-400 mt-3 leading-relaxed">
-            • Bachelor’s and Master’s in Electrical Engineering, focused on <span class="accent">Signal and Power Integrity</span>.<br>
-            • Specialized in electromagnetics, microcontrollers, and circuit design.<br>
-            • Led R&D projects in sensor systems, PCB communication interfaces, and PDN modeling.
-          </p>
-        </div>
-      </div>
-    </section>
+  <!-- Footer -->
+  <footer class="mt-20 border-t border-white/5">
+    <div class="mx-auto max-w-6xl px-6 py-8 text-sm text-slate-400 flex flex-wrap gap-4 items-center justify-between">
+      <p>© <span id="y"></span> Abel Tesfai. All rights reserved.</p>
+      <a href="contact.html" class="text-cyan-300 hover:text-cyan-200">Let’s Connect →</a>
+    </div>
+  </footer>
 
-    <!-- Projects -->
-    <section id="projects" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b border-gray-800 pb-2 mb-6">Highlighted Technical Projects</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card p-6">
-          <img src="images/pdn_toolkit.png" alt="PDN Analysis Toolkit" class="rounded-md mb-4">
-          <h3 class="text-xl font-bold text-white">PDN Analysis Toolkit</h3>
-          <p class="text-gray-400 mt-2">Automated impedance and ripple analysis for PDN systems using <span class="accent">Python + PyAEDT</span>.</p>
-          <div class="flex flex-wrap gap-2 mt-3 text-xs">
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Python</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Ansys</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Tkinter</span>
-          </div>
-          <a href="projects.html#pdn" class="accent hover:underline inline-block mt-4">View Details →</a>
-        </div>
-
-        <div class="card p-6">
-          <img src="images/decap_dash.png" alt="Decap Dashboard" class="rounded-md mb-4">
-          <h3 class="text-xl font-bold text-white">MCM Decap Optimization Dashboard</h3>
-          <p class="text-gray-400 mt-2">GUI tool comparing MLCC, MTLIC, and Si-Cap technologies with real-time ESL/ESR plots.</p>
-          <div class="flex flex-wrap gap-2 mt-3 text-xs">
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Tkinter</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Python</span>
-            <span class="bg-[#1F2833] px-2 py-1 rounded-md">Matplotlib</span>
-          </div>
-          <a href="projects.html#decap" class="accent hover:underline inline-block mt-4">View Details →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" data-aos="fade-up">
-      <h2 class="text-2xl font-semibold border-b border-gray-800 pb-2 mb-6">Core Skills</h2>
-      <div class="grid md:grid-cols-2 gap-6 text-gray-300">
-        <ul class="list-disc list-inside space-y-1">
-          <li>Power & Signal Integrity Modeling</li>
-          <li>AC/DC PDN Simulation & Validation</li>
-          <li>Transient + Frequency Domain Analysis</li>
-          <li>Capacitor ESL/ESR Characterization</li>
-        </ul>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Python, PyAEDT, Tkinter, Pandas</li>
-          <li>ANSYS HFSS, Q2D, Nexxim</li>
-          <li>Automation, GUI Tools, Data Visualization</li>
-          <li>VRM Modeling & Decoupling Strategy</li>
-        </ul>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" data-aos="fade-up" class="border-t border-gray-800 pt-8 text-center">
-      <h2 class="text-xl font-semibold mb-4">Connect</h2>
-      <div class="flex justify-center space-x-6">
-        <a href="https://www.linkedin.com/in/abel-tesfai-206772141/" target="_blank" class="accent hover:text-blue-300">LinkedIn</a>
-        <a href="https://github.com/abeltesfai250" target="_blank" class="accent hover:text-blue-300">GitHub</a>
-        <a href="mailto:abelntesfai@gmail.com" class="accent hover:text-blue-300">Email</a>
-      </div>
-      <p class="text-gray-600 text-sm mt-6">© 2025 Abel Tesfai — Built with TailwindCSS, AOS, and GitHub Pages</p>
-    </section>
-  </main>
-
-  <script>
-    const path = location.pathname.split('/').pop() || 'index.html';
-    document.querySelectorAll('.nav a').forEach(a => {
-      if (a.getAttribute('href') === path) a.classList.add('active');
-    });
-  </script>
+  <script>document.getElementById('y').textContent = new Date().getFullYear();</script>
 </body>
 </html>
